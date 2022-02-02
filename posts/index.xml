@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Hugo tranquilpeak theme</title>
-    <link>https://example.org/posts/</link>
+    <link>/BurkeyLai.github.io/posts/</link>
     <description>Recent content in Posts on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Jan 2022 12:37:42 +0800</lastBuildDate><atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Jan 2022 12:37:42 +0800</lastBuildDate><atom:link href="/BurkeyLai.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
-      <link>https://example.org/2022/01/my-first-post/</link>
+      <link>/BurkeyLai.github.io/2022/01/my-first-post/</link>
       <pubDate>Sun, 23 Jan 2022 12:37:42 +0800</pubDate>
       
-      <guid>https://example.org/2022/01/my-first-post/</guid>
+      <guid>/BurkeyLai.github.io/2022/01/my-first-post/</guid>
       <description></description>
     </item>
     
