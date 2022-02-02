@@ -961,7 +961,7 @@ pre.code-highlight > code {
   overflow: auto;
 }
 #sidebar .sidebar-profile {
-  color: #000000;
+  color: #ebebeb;
   text-align: center;
   padding-top: 18px;
   margin-bottom: 15px;
@@ -972,7 +972,7 @@ pre.code-highlight > code {
 }
 #sidebar .sidebar-profile .sidebar-profile-name {
   font-size: 1.1em;
-  color: #000000;
+  color: #ebebeb;
 }
 #sidebar ul.sidebar-buttons {
   padding: 0;
@@ -985,13 +985,13 @@ pre.code-highlight > code {
   line-height: 45px;
 }
 #sidebar ul.sidebar-buttons li.sidebar-button .sidebar-button-link {
-  color: #000000;
+  color: #ebebeb;
   display: block;
   height: 100%;
 }
 #sidebar ul.sidebar-buttons li.sidebar-button .sidebar-button-link:hover, #sidebar ul.sidebar-buttons li.sidebar-button .sidebar-button-link:active {
   text-decoration: none;
-  color: #595959;
+  color: white;
 }
 #sidebar ul.sidebar-buttons:first-child {
   margin-top: 5px;
@@ -1442,7 +1442,7 @@ pre.code-highlight > code {
 #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-location {
     font-weight: 400;
     font-size: 1.6rem;
-    color: #000000;
+    color: #ebebeb;
   }
   #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-job,
 #sidebar[data-behavior="1"] .sidebar-profile .sidebar-profile-location {
@@ -1618,7 +1618,7 @@ pre.code-highlight > code {
 #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-location {
     font-weight: 400;
     font-size: 1.6rem;
-    color: #000000;
+    color: #ebebeb;
   }
   #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-job,
 #sidebar[data-behavior="4"] .sidebar-profile .sidebar-profile-location {
