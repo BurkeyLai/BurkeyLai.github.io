@@ -13,9 +13,7 @@
       <pubDate>Sun, 23 Jan 2022 12:37:42 +0800</pubDate>
       
       <guid>https://BurkeyLai.github.io/2022/01/hello-to-opencl/</guid>
-      <description>OpenCL (Open Computing Language) is a framework with standard API and programming language maintained by Khronos Group for parallel computing of heterogeneous devices. It includes the language for writing kernels (functions that execute on OpenCL devices) and APIs that are used to define and then control the platforms.
-OpenCL has been adopted by Apple, Intel, AMD, Nvidia and ARM, etc. OpenCL 3.0 is the latest version released in 2020.
-Heterogeneous    OpenCL Computing Devices  Now, there is a question: What is Heterogeneous Devices (or we say Heterogeneous Computing)?</description>
+      <description>OpenCL (Open Computing Language) is a framework with standard API and programming language maintained by Khronos Group for parallel computing of heterogeneous devices.</description>
     </item>
     
   </channel>

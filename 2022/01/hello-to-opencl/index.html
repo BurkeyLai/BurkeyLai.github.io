@@ -32,8 +32,8 @@
     }
     
   },
-  "description": "OpenCL (Open Computing Language) is a framework with standard API and programming language maintained by Khronos Group for parallel computing of heterogeneous devices. It includes the language for writing kernels (functions that execute on OpenCL devices) and APIs that are used to define and then control the platforms.\nOpenCL has been adopted by Apple, Intel, AMD, Nvidia and ARM, etc. OpenCL 3.0 is the latest version released in 2020.\nHeterogeneous    OpenCL Computing Devices  Now, there is a question: What is Heterogeneous Devices (or we say Heterogeneous Computing)?",
-  "keywords": []
+  "description": "OpenCL (Open Computing Language) is a framework with standard API and programming language maintained by Khronos Group for parallel computing of heterogeneous devices.",
+  "keywords": ["OpenCL, Parallel Computing, Heterogeneous Computing, Deep Learning, Accelerator"]
 }
 
 </script>
@@ -42,27 +42,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.92.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Burkey Lai">
-<meta name="keywords" content="">
-<meta name="description" content="OpenCL (Open Computing Language) is a framework with standard API and programming language maintained by Khronos Group for parallel computing of heterogeneous devices. It includes the language for writing kernels (functions that execute on OpenCL devices) and APIs that are used to define and then control the platforms.
-OpenCL has been adopted by Apple, Intel, AMD, Nvidia and ARM, etc. OpenCL 3.0 is the latest version released in 2020.
-Heterogeneous    OpenCL Computing Devices  Now, there is a question: What is Heterogeneous Devices (or we say Heterogeneous Computing)?">
+<meta name="keywords" content="OpenCL, Parallel Computing, Heterogeneous Computing, Deep Learning, Accelerator">
+<meta name="description" content="OpenCL (Open Computing Language) is a framework with standard API and programming language maintained by Khronos Group for parallel computing of heterogeneous devices.">
 
 
-<meta property="og:description" content="OpenCL (Open Computing Language) is a framework with standard API and programming language maintained by Khronos Group for parallel computing of heterogeneous devices. It includes the language for writing kernels (functions that execute on OpenCL devices) and APIs that are used to define and then control the platforms.
-OpenCL has been adopted by Apple, Intel, AMD, Nvidia and ARM, etc. OpenCL 3.0 is the latest version released in 2020.
-Heterogeneous    OpenCL Computing Devices  Now, there is a question: What is Heterogeneous Devices (or we say Heterogeneous Computing)?">
+<meta property="og:description" content="OpenCL (Open Computing Language) is a framework with standard API and programming language maintained by Khronos Group for parallel computing of heterogeneous devices.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello to OpenCL">
 <meta name="twitter:title" content="Hello to OpenCL">
 <meta property="og:url" content="https://BurkeyLai.github.io/2022/01/hello-to-opencl/">
 <meta property="twitter:url" content="https://BurkeyLai.github.io/2022/01/hello-to-opencl/">
 <meta property="og:site_name" content="Home">
-<meta property="og:description" content="OpenCL (Open Computing Language) is a framework with standard API and programming language maintained by Khronos Group for parallel computing of heterogeneous devices. It includes the language for writing kernels (functions that execute on OpenCL devices) and APIs that are used to define and then control the platforms.
-OpenCL has been adopted by Apple, Intel, AMD, Nvidia and ARM, etc. OpenCL 3.0 is the latest version released in 2020.
-Heterogeneous    OpenCL Computing Devices  Now, there is a question: What is Heterogeneous Devices (or we say Heterogeneous Computing)?">
-<meta name="twitter:description" content="OpenCL (Open Computing Language) is a framework with standard API and programming language maintained by Khronos Group for parallel computing of heterogeneous devices. It includes the language for writing kernels (functions that execute on OpenCL devices) and APIs that are used to define and then control the platforms.
-OpenCL has been adopted by Apple, Intel, AMD, Nvidia and ARM, etc. OpenCL 3.0 is the latest version released in 2020.
-Heterogeneous    OpenCL Computing Devices  Now, there is a question: What is Heterogeneous Devices (or we say Heterogeneous Computing)?">
+<meta property="og:description" content="OpenCL (Open Computing Language) is a framework with standard API and programming language maintained by Khronos Group for parallel computing of heterogeneous devices.">
+<meta name="twitter:description" content="OpenCL (Open Computing Language) is a framework with standard API and programming language maintained by Khronos Group for parallel computing of heterogeneous devices.">
 <meta property="og:locale" content="en-us">
 
   
@@ -73,6 +65,24 @@ Heterogeneous    OpenCL Computing Devices  Now, there is a question: What is Het
   
   
   
+    
+      <meta property="article:section" content="AI">
+    
+      <meta property="article:section" content="Computing">
+    
+  
+  
+    
+      <meta property="article:tag" content="OpenCL">
+    
+      <meta property="article:tag" content="Parallel Computing">
+    
+      <meta property="article:tag" content="Heterogeneous Computing">
+    
+      <meta property="article:tag" content="Deep Learning">
+    
+      <meta property="article:tag" content="Accelerator">
+    
   
 
 
@@ -107,7 +117,7 @@ Heterogeneous    OpenCL Computing Devices  Now, there is a question: What is Het
     
     
     
-    <link rel="stylesheet" href="https://BurkeyLai.github.io/css/style-rhiezdv79kt2laje90ho4dal0svgu9k316fnzd7r9i99hbyivhsifwdzec.min.css" />
+    <link rel="stylesheet" href="https://BurkeyLai.github.io/css/style-b6jsiy0rfx5m269rfjzbfodlnuhfuy6wadwjoelf8qktd41xfg0zztkqtb1.min.css" />
     
     
 
@@ -272,6 +282,16 @@ Heterogeneous    OpenCL Computing Devices  Now, there is a question: What is Het
       </time>
     
     
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://BurkeyLai.github.io/categories/ai">AI</a>, 
+    
+      <a class="category-link" href="https://BurkeyLai.github.io/categories/computing">Computing</a>
+    
+  
+
   </div>
 
 </div>
@@ -312,7 +332,7 @@ Here comes several examples.</p>
 <p>To sum up, we said OpenCL has <strong>Program Portability</strong> because it is a framework for building <em>parallel applications</em> that are portable across heterogeneous platforms.</p>
 <p>OpenCL use four theoretical models to organize and describe the whole architecture and we will introduce next by.</p>
 <h1 id="platform-model">Platform Model</h1>
-<p>OpenCL provides a unified programming interface which has the <em>abstracted platform model and runtime kernel source compilation</em>.</p>
+<p>OpenCL provides a unified programming interface which has the <em>abstracted platform model</em> and <em>runtime kernel source compilation</em>.</p>
 <p>
   <figure>
     <center><img src="https://BurkeyLai.github.io/images/OpenCL_Platform_Model.jpeg" alt="OpenCL Platform Model, Source: OpenCL Programming Guide"></center>
@@ -383,6 +403,24 @@ For example, I can have a set of four groups executing together in one device, a
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
             
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/opencl/">OpenCL</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/parallel-computing/">Parallel Computing</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/heterogeneous-computing/">Heterogeneous Computing</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/deep-learning/">Deep Learning</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/accelerator/">Accelerator</a>
+
+                  </div>
+                
               
             
             
@@ -639,7 +677,7 @@ For example, I can have a set of four groups executing together in one device, a
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-<script src="https://BurkeyLai.github.io/js/script-2qpqokoetymy9agh0u389snedcnhqeikzc6seqkldbsltufqzgpb6yrztd0i.min.js"></script>
+<script src="https://BurkeyLai.github.io/js/script-xjubq8n3q4w5j55w53lhhzaz7wgph3rd4j5cba5wfanqmrsiai521dunq.min.js"></script>
 
 
   

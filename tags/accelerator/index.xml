@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home</title>
-    <link>https://BurkeyLai.github.io/</link>
-    <description>Recent content on Home</description>
+    <title>Accelerator on Home</title>
+    <link>https://BurkeyLai.github.io/tags/accelerator/</link>
+    <description>Recent content in Accelerator on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Jan 2022 12:37:42 +0800</lastBuildDate><atom:link href="https://BurkeyLai.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Jan 2022 12:37:42 +0800</lastBuildDate><atom:link href="https://BurkeyLai.github.io/tags/accelerator/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello to OpenCL</title>
       <link>https://BurkeyLai.github.io/2022/01/hello-to-opencl/</link>
