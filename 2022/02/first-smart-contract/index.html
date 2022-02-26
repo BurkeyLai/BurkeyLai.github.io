@@ -33,7 +33,7 @@
     
   },
   "description": "In order to understand the blockchain and its application DApp, I try to experiment my first smart contract with Solidity on Ethereum IDE Remix.",
-  "keywords": ["Blockchain, Smart Contract, Solidity, React, nanohtml, morphdom, csjs-inject"]
+  "keywords": ["Blockchain, Smart Contract, Solidity, Ganache, React, nanohtml, morphdom, csjs-inject"]
 }
 
 </script>
@@ -42,7 +42,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.92.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Burkey Lai">
-<meta name="keywords" content="Blockchain, Smart Contract, Solidity, React, nanohtml, morphdom, csjs-inject">
+<meta name="keywords" content="Blockchain, Smart Contract, Solidity, Ganache, React, nanohtml, morphdom, csjs-inject">
 <meta name="description" content="In order to understand the blockchain and its application DApp, I try to experiment my first smart contract with Solidity on Ethereum IDE Remix.">
 
 
@@ -78,6 +78,8 @@
       <meta property="article:tag" content="Smart Contract">
     
       <meta property="article:tag" content="Solidity">
+    
+      <meta property="article:tag" content="Ganache">
     
       <meta property="article:tag" content="React">
     
@@ -302,21 +304,25 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p>In order to understand the blockchain and its application DApp, I try to experiment my first smart contract with Solidity on <a href="https://remix.ethereum.org/">Ethereum IDE Remix</a>.
-To interact with it, a simple website interface created using <a href="https://reactjs.org/">React</a> and frontend lite module is implemented.
-The whole experimental environment is built on <a href="https://trufflesuite.com/ganache/index.html">Ganache</a>, the personal Ethereum chain.</p>
+              <p>In order to understand the blockchain and its application DApp, I try to experiment my first smart contract with Solidity on <a href="https://remix.ethereum.org/" target="_blank">Ethereum IDE Remix</a>
+.
+To interact with it, a simple website interface created using <a href="https://reactjs.org/" target="_blank">React</a>
+ and frontend lite module is implemented.
+The whole experimental environment is built on <a href="https://trufflesuite.com/ganache/index.html" target="_blank">Ganache</a>
+, the personal Ethereum chain.</p>
 <h1 id="ganache">Ganache</h1>
 <p>First of all, the experimental environment need to be setup.
 Here we use Ganache to test our smart contract function as it was deployed on the blockchain.
 As Ganache installed, use <strong>Quick Start</strong> can create 10 testing accounts which are existed only in this local private chain.
-Each account has its own address, private key and balance for user&rsquo;s experimental purpose.
+Each account has its own <em>address</em>, <em>private key</em> and <em>balance</em> for user&rsquo;s experimental purpose.
 The detail can be studied at the Ganache&rsquo;s official website.</p>
-<p>The most importance thing here is to remember the <strong>RPC Server address</strong> diplayed on the top of the user interface.
+<p>The most importance thing here is to remember the <strong>RPC Server</strong> address diplayed on the top of the user interface.
 Something like:</p>
 <pre tabindex="0"><code>RPC SERVER
 HTTP://127.0.0.1:XXXX
 </code></pre><h1 id="king-of-the-ether">King of the Ether</h1>
-<p><em><a href="https://www.kingoftheether.com/thrones/kingoftheether/index.html">King of the Ether</a></em> was a famous DApp.
+<p><em><a href="https://www.kingoftheether.com/thrones/kingoftheether/index.html" target="_blank">King of the Ether</a>
+</em> was a famous DApp.
 This game has a simple logic and could be simplifed easily, so I use it for my practice.
 There are few mechanisms to build this game:</p>
 <h2 id="heading"></h2>
@@ -326,12 +332,54 @@ There are few mechanisms to build this game:</p>
 <li>The usurped king can take the ether paid by usurper, with some management fee deducted.</li>
 <li>The <em>owner</em> can withdrawal the fee as the game terminated.</li>
 </ul>
-<p>I referred the implementation <a href="https://ithelp.ithome.com.tw/articles/10205298">here</a> and its prototype on <a href="https://github.com/alincode/king-sandbox">GitHub</a>.
+<p>I referred the implementation <a href="https://ithelp.ithome.com.tw/articles/10205298" target="_blank">here</a>
+ and its prototype on <a href="https://github.com/alincode/king-sandbox" target="_blank">GitHub</a>
+.
 You can just use this example to go forward or try to do some modifications.</p>
-<p>I have my <a href="https://github.com/BurkeyLai/King-of-the-Ether">own</a> modified version written in Solidity which are just added with some more functions and it&rsquo;s welcome to provide any suggestion.</p>
+<p>I have my <a href="https://github.com/BurkeyLai/King-of-the-Ether" target="_blank">own</a>
+ modified version written in Solidity which are just added with some more functions and it&rsquo;s welcome to provide any suggestion.</p>
 <h1 id="experiment-on-remix">Experiment on Remix</h1>
-<p>Now it&rsquo;s time to open Remix. The fundamental usage for this IDE can be found on the <a href="https://remix-ide.readthedocs.io/en/latest/index.html">official website</a> and it won&rsquo;t be further discussed here.</p>
-<h1 id="react-project">React Project</h1>
+<p>Now it&rsquo;s time to open Remix. The fundamental usage for this IDE can be found on the <a href="https://remix-ide.readthedocs.io/en/latest/index.html" target="_blank">official website</a>
+ and it won&rsquo;t be further discussed here.</p>
+<p>In the Remix workspace, create your first <em>.sol</em> file and you can just copy and paste the <a href="https://github.com/BurkeyLai/King-of-the-Ether/blob/master/contracts/KOE.sol" target="_blank">code</a>
+ from my project.
+The most important thing here is to decide which version of Solidity you are going to use and enable <a href="https://docs.soliditylang.org/en/v0.6.10/layout-of-source-files.html#abiencoderv2" target="_blank">ABIEncoderV2</a>
+.</p>
+<pre tabindex="0"><code>// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+pragma experimental ABIEncoderV2;
+</code></pre><p>The difference of the Solidity version would affect the implementation of syntax so it is needed to be consider carefully.</p>
+<p>Next, press the <strong>Solidity compiler</strong> tab on the sidebar at left hand side.
+Check your compiler version and compiled language, then press <strong>Compile XXX.sol</strong>.
+If there is any error, fix it or the smart contract won&rsquo;t be interacted.</p>
+<p>Then, press <strong>Deploy &amp; run trancations</strong> tab to go forward.
+Here, we can launch Ganache first and copy the <strong>RPC Server</strong> address.
+At the <strong>ENVIRONMENT</strong> column which default is <em>JavaScript VM</em>, choose another one, the <em>Web3 Provider</em>.
+We paste the copied address at the column below and confirm.
+Now, we can interact with our smart contract with the listed accounts provided by Ganache.
+For example, use an account as the <em>owner</em> to deploy the smart contract, and switch to other accounts for playing the game.</p>
+<p>One more thing to notice about is the <em>gas</em> you need to pay.
+The <a href="https://eth-converter.com/" target="_blank">Ethereum Unit Converter</a>
+ can make you more convenient to do the experiment.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>In this post, we create our first smart contract written in Solidity with Remix.
+And do the experiment in the local Ethereun blockchain created using Ganache.
+Next, we will implement the smart contract through a website to complete a simple DApp.</p>
+<h1 id="reference">Reference</h1>
+<ul>
+<li>
+<p><a href="https://ithelp.ithome.com.tw/articles/10200395" target="_blank">Smart Contract in 30 Days</a>
+</p>
+</li>
+<li>
+<p><a href="https://remix-ide.readthedocs.io/en/latest/index.html" target="_blank">Remix Doc</a>
+</p>
+</li>
+<li>
+<p><a href="https://trufflesuite.com/docs/ganache/" target="_blank">Ganache Doc</a>
+</p>
+</li>
+</ul>
 
               
 
@@ -351,6 +399,8 @@ You can just use this example to go forward or try to do some modifications.</p>
   <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/smart-contract/">Smart Contract</a>
 
   <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/solidity/">Solidity</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/ganache/">Ganache</a>
 
   <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/react/">React</a>
 

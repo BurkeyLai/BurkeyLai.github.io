@@ -298,7 +298,9 @@
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p><a href="https://www.khronos.org/opencl/">OpenCL</a> (Open Computing Language) is a framework with standard API and programming language maintained by <a href="https://en.wikipedia.org/wiki/Khronos_Group">Khronos Group</a> for parallel computing of heterogeneous devices.
+              <p><a href="https://www.khronos.org/opencl/" target="_blank">OpenCL</a>
+ (Open Computing Language) is a framework with standard API and programming language maintained by <a href="https://en.wikipedia.org/wiki/Khronos_Group" target="_blank">Khronos Group</a>
+ for parallel computing of heterogeneous devices.
 It includes the language for writing kernels (functions that execute on OpenCL devices) and APIs that are used to define and then control the platforms.</p>
 <p>OpenCL has been adopted by Apple, Intel, AMD, Nvidia and ARM, etc.
 OpenCL 3.0 is the latest version released in 2020.</p>
@@ -350,14 +352,17 @@ The <em>processing elements</em> compose the <em>compute units</em> and execute 
   </figure>
 </p>
 <p>Moreover, OpenCL applications rely on runtime compilation in order to achieve portability.
-A common usage like <a href="https://en.wikipedia.org/wiki/LLVM">LLVM</a> framework can translate the application OpenCL source code into <em><a href="https://en.wikipedia.org/wiki/Intermediate_representation">intermediate representation</a></em> which is an executable binary of the target compute device.</p>
+A common usage like <a href="https://en.wikipedia.org/wiki/LLVM" target="_blank">LLVM</a>
+ framework can translate the application OpenCL source code into <em><a href="https://en.wikipedia.org/wiki/Intermediate_representation" target="_blank">intermediate representation</a>
+</em> which is an executable binary of the target compute device.</p>
 <h1 id="execution-model">Execution Model</h1>
-<p><a href="https://sites.google.com/site/csc8820/opencl-basics">
-  <figure>
-    <center><img src="https://BurkeyLai.github.io/images/OpenCL_Execution_Model.jpg" alt="OpenCL Execution Model, Source: OpenCL Basics"></center>
-    <figcaption class="figure-caption text-center" style="font-size: 10px">OpenCL Execution Model, Source: OpenCL Basics</figcaption>
-  </figure>
-</a></p>
+<p><a href="https://sites.google.com/site/csc8820/opencl-basics" target="_blank">
+  &lt;figure&gt;
+    &lt;center&gt;&lt;img src=&#34;/images/OpenCL_Execution_Model.jpg&#34; alt=&#34;OpenCL Execution Model, Source: OpenCL Basics&#34;&gt;&lt;/center&gt;
+    &lt;figcaption class=&#34;figure-caption text-center&#34; style=&#34;font-size: 10px&#34;&gt;OpenCL Execution Model, Source: OpenCL Basics&lt;/figcaption&gt;
+  &lt;/figure&gt;
+</a>
+</p>
 <p>
   <figure>
     <center><img src="https://BurkeyLai.github.io/images/Abstracted_Hierarchical_System.png" alt="Abstracted Hierarchical System, both the compute hierarchy and memory hierarchy"></center>
@@ -372,12 +377,13 @@ Workload hierarchy has this <strong>NDRange</strong> to describe global size and
 The <em>context</em> can be described as a abstracted container which hides the low level details of different workloads and provides a consistent interface for the OpenCL program to interact with different workloads.</p>
 <p>In OpenCL’s abstracted hierarchical system, NDRange workload is mapping to a compute device, a work-group mapping to a compute unit (Synchronization unit), and work-item to a processing element.</p>
 <h1 id="memory-model">Memory Model</h1>
-<p><a href="(https://www.youtube.com/watch?v=NmUAJwPOJ7o&amp;t=217s)">
-  <figure>
-    <center><img src="https://BurkeyLai.github.io/images/OpenCL_Memory_Model.png" alt="OpenCL Memory Model, Source: OpenCL — Runtime System"></center>
-    <figcaption class="figure-caption text-center" style="font-size: 10px">penCL Memory Model, Source: OpenCL — Runtime System</figcaption>
-  </figure>
-</a></p>
+<p><a href="%28https://www.youtube.com/watch?v=NmUAJwPOJ7o&amp;t=217s%29">
+  &lt;figure&gt;
+    &lt;center&gt;&lt;img src=&#34;/images/OpenCL_Memory_Model.png&#34; alt=&#34;OpenCL Memory Model, Source: OpenCL — Runtime System&#34;&gt;&lt;/center&gt;
+    &lt;figcaption class=&#34;figure-caption text-center&#34; style=&#34;font-size: 10px&#34;&gt;penCL Memory Model, Source: OpenCL — Runtime System&lt;/figcaption&gt;
+  &lt;/figure&gt;
+</a>
+</p>
 <p>As we can see the figure above, the memory model is mainly composed by two parts.
 The <em>context</em> part is where things become a bit more complex and different with Nvidia’s CUDA.
 Here we can use more than one device rather than a single device (CUDA can only implemented on Nvidia’s GPU) to implement the computing.</p>
@@ -392,9 +398,12 @@ For example, I can have a set of four groups executing together in one device, a
 <li>These two methods can be hybrid.</li>
 </ul>
 <h1 id="reference">Reference</h1>
-<p>[1] <a href="https://sites.google.com/site/csc8820/opencl-basics">OpenCL Basics</a></p>
-<p>[2] <a href="https://www.youtube.com/watch?v=NmUAJwPOJ7o&amp;t=217s">OpenCL — Runtime System</a></p>
-<p>[3] <a href="https://caslab.ee.ncku.edu.tw/dokuwiki/_media/research:caslab_2014_cnf_03.pdf">An OpenCL Runtime System for a Heterogeneous Many-Core Virtual Platform</a></p>
+<p>[1] <a href="https://sites.google.com/site/csc8820/opencl-basics" target="_blank">OpenCL Basics</a>
+</p>
+<p>[2] <a href="https://www.youtube.com/watch?v=NmUAJwPOJ7o&amp;t=217s" target="_blank">OpenCL — Runtime System</a>
+</p>
+<p>[3] <a href="https://caslab.ee.ncku.edu.tw/dokuwiki/_media/research:caslab_2014_cnf_03.pdf" target="_blank">An OpenCL Runtime System for a Heterogeneous Many-Core Virtual Platform</a>
+</p>
 
               
 
