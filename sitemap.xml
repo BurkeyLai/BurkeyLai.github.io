@@ -2,13 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://BurkeyLai.github.io/tags/blockchain/</loc>
+    <lastmod>2022-02-25T22:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/categories/blockchain/</loc>
+    <lastmod>2022-02-25T22:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/categories/</loc>
+    <lastmod>2022-02-25T22:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/tags/csjs-inject/</loc>
+    <lastmod>2022-02-25T22:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/2022/02/first-smart-contract/</loc>
+    <lastmod>2022-02-25T22:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/</loc>
+    <lastmod>2022-02-25T22:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/tags/morphdom/</loc>
+    <lastmod>2022-02-25T22:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/tags/nanohtml/</loc>
+    <lastmod>2022-02-25T22:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/posts/</loc>
+    <lastmod>2022-02-25T22:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/tags/react/</loc>
+    <lastmod>2022-02-25T22:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/tags/smart-contract/</loc>
+    <lastmod>2022-02-25T22:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/categories/smart-contract/</loc>
+    <lastmod>2022-02-25T22:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/tags/solidity/</loc>
+    <lastmod>2022-02-25T22:06:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/tags/</loc>
+    <lastmod>2022-02-25T22:06:00+08:00</lastmod>
+  </url><url>
     <loc>https://BurkeyLai.github.io/tags/accelerator/</loc>
     <lastmod>2022-01-23T12:37:42+08:00</lastmod>
   </url><url>
     <loc>https://BurkeyLai.github.io/categories/ai/</loc>
-    <lastmod>2022-01-23T12:37:42+08:00</lastmod>
-  </url><url>
-    <loc>https://BurkeyLai.github.io/categories/</loc>
     <lastmod>2022-01-23T12:37:42+08:00</lastmod>
   </url><url>
     <loc>https://BurkeyLai.github.io/categories/computing/</loc>
@@ -23,19 +62,10 @@
     <loc>https://BurkeyLai.github.io/tags/heterogeneous-computing/</loc>
     <lastmod>2022-01-23T12:37:42+08:00</lastmod>
   </url><url>
-    <loc>https://BurkeyLai.github.io/</loc>
-    <lastmod>2022-01-23T12:37:42+08:00</lastmod>
-  </url><url>
     <loc>https://BurkeyLai.github.io/tags/opencl/</loc>
     <lastmod>2022-01-23T12:37:42+08:00</lastmod>
   </url><url>
     <loc>https://BurkeyLai.github.io/tags/parallel-computing/</loc>
-    <lastmod>2022-01-23T12:37:42+08:00</lastmod>
-  </url><url>
-    <loc>https://BurkeyLai.github.io/posts/</loc>
-    <lastmod>2022-01-23T12:37:42+08:00</lastmod>
-  </url><url>
-    <loc>https://BurkeyLai.github.io/tags/</loc>
     <lastmod>2022-01-23T12:37:42+08:00</lastmod>
   </url><url>
     <loc>https://BurkeyLai.github.io/archives/</loc>
