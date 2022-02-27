@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "My First DApp",
+  
+  "datePublished": "2022-02-27T13:28:00+08:00",
+  "dateModified": "2022-02-27T13:28:00+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "Burkey Lai",
+    
+    "image": "https://BurkeyLai.github.io/images/ironman.jpg"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/BurkeyLai.github.io\/2022\/02\/my-first-dapp\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Home",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://BurkeyLai.github.io/images/ironman.jpg"
+    }
+    
+  },
+  "description": "In order to understand the blockchain and its application DApp, I finished my first smart contract with Solidity and interacted with it through React based frontend website.",
+  "keywords": ["Blockchain, Smart Contract, Solidity, Ganache, React, nanohtml, morphdom, csjs-inject"]
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.92.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Burkey Lai">
+<meta name="keywords" content="Blockchain, Smart Contract, Solidity, Ganache, React, nanohtml, morphdom, csjs-inject">
+<meta name="description" content="In order to understand the blockchain and its application DApp, I finished my first smart contract with Solidity and interacted with it through React based frontend website.">
+
+
+<meta property="og:description" content="In order to understand the blockchain and its application DApp, I finished my first smart contract with Solidity and interacted with it through React based frontend website.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My First DApp">
+<meta name="twitter:title" content="My First DApp">
+<meta property="og:url" content="https://BurkeyLai.github.io/2022/02/my-first-dapp/">
+<meta property="twitter:url" content="https://BurkeyLai.github.io/2022/02/my-first-dapp/">
+<meta property="og:site_name" content="Home">
+<meta property="og:description" content="In order to understand the blockchain and its application DApp, I finished my first smart contract with Solidity and interacted with it through React based frontend website.">
+<meta name="twitter:description" content="In order to understand the blockchain and its application DApp, I finished my first smart contract with Solidity and interacted with it through React based frontend website.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2022-02-27T13:28:00">
+  
+  
+    <meta property="article:modified_time" content="2022-02-27T13:28:00">
+  
+  
+  
+    
+      <meta property="article:section" content="Blockchain">
+    
+      <meta property="article:section" content="Smart Contract">
+    
+      <meta property="article:section" content="DApp">
+    
+  
+  
+    
+      <meta property="article:tag" content="Blockchain">
+    
+      <meta property="article:tag" content="Smart Contract">
+    
+      <meta property="article:tag" content="Solidity">
+    
+      <meta property="article:tag" content="Ganache">
+    
+      <meta property="article:tag" content="React">
+    
+      <meta property="article:tag" content="nanohtml">
+    
+      <meta property="article:tag" content="morphdom">
+    
+      <meta property="article:tag" content="csjs-inject">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://BurkeyLai.github.io/images/ironman.jpg">
+  <meta property="twitter:image" content="https://BurkeyLai.github.io/images/ironman.jpg">
+
+
+
+
+
+
+    <title>My First DApp</title>
+
+    <link rel="icon" href="https://BurkeyLai.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://BurkeyLai.github.io/2022/02/my-first-dapp/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://BurkeyLai.github.io/css/style-9glcfduhmxy3dpww8dmc2rpasorgusiokbrrptpvzrgi6lajgwvd0zyafzf.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://BurkeyLai.github.io/" aria-label="Go to homepage">Home</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://BurkeyLai.github.io/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://BurkeyLai.github.io/images/ironman.jpg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://BurkeyLai.github.io/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://BurkeyLai.github.io/images/ironman.jpg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Burkey Lai</h4>
+        
+          <h5 class="sidebar-profile-bio" style="color: #961F22"><em>imugly1029<!-- raw HTML omitted -->@<!-- raw HTML omitted -->gmail.com</em></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://BurkeyLai.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://BurkeyLai.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://BurkeyLai.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://BurkeyLai.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/BurkeyLai" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/bo-xiang-lai-352713184/" target="_blank" rel="noopener" title="LinkedIn">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://BurkeyLai.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://BurkeyLai.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      My First DApp
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-02-27T13:28:00&#43;08:00">
+        
+  February 27, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://BurkeyLai.github.io/categories/blockchain">Blockchain</a>, 
+    
+      <a class="category-link" href="https://BurkeyLai.github.io/categories/smart-contract">Smart Contract</a>, 
+    
+      <a class="category-link" href="https://BurkeyLai.github.io/categories/dapp">DApp</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>In order to understand the blockchain and its application DApp, I finished my first smart contract with Solidity and interacted with it through <a href="https://reactjs.org/" target="_blank">React</a>
+ based frontend website.</p>
+<p>I&rsquo;m totally a newbie to JavaScript and website developments.
+In order to fast foward my steps about my learning and simplify what I have experimented, I use frontend lite module to design my static website.
+Any suggestion and idea would be very welcomed and appreciated.</p>
+<blockquote>
+<p><a href="https://github.com/BurkeyLai/King-of-the-Ether" target="_blank">GitHub</a>
+</p>
+</blockquote>
+<hr>
+<h1 id="contract-abi">Contract ABI</h1>
+<p><strong><a href="https://docs.soliditylang.org/en/v0.8.12/abi-spec.html" target="_blank">ABI</a>
+</strong> (Application Binary Interface) is the standard way to interact with contracts in the Ethereum ecosystem, both from outside the blockchain and for contract-to-contract interaction.
+It allows us to use its interface generated from the smart contract to create a website for interacting with users.</p>
+<p>In the <a href="https://BurkeyLai.github.io/2022/02/my-first-smart-contract/">previous post</a>
+, we have our first smart contract.
+We can fetch the ABI at the bottom of the <strong>Solidity compiler</strong> tab.
+Copy it and paste in a file named <code>abi.json</code>, which will be used later.</p>
+<h1 id="react-project">React Project</h1>
+<p>I have surveyed an <a href="https://blog.niclin.tw/2022/02/01/nft-smart-contract-1/" target="_blank">article</a>
+ that teach people create their own NFT and use a website to contact the smart contract to mint.
+The example in the article use React to build the website and it is very easy to get started.</p>
+<p>First, we create the React Project:</p>
+<pre tabindex="0"><code class="language-terminal" data-lang="terminal">npx create-react-app kingofether
+cd kingofether
+yarn start
+</code></pre><p>Then, it will open a new webpage and you can see a React logo.</p>
+<p>
+  <figure>
+    <center><img src="https://BurkeyLai.github.io/images/react_launch_webpage.png" alt="React launch webpage"></center>
+    <figcaption class="figure-caption text-center" style="font-size: 10px">React launch webpage</figcaption>
+  </figure>
+</p>
+<p>Then, we use <a href="https://www.npmjs.com/package/react-app-rewired" target="_blank">rewired</a>
+ to avoid some webpack 5 issues.</p>
+<pre tabindex="0"><code class="language-terminal" data-lang="terminal">yarn add react-app-rewired
+</code></pre><p>The <code>package.json</code> should be modified:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+    <span style="color:#f92672">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;react-app-rewired start&#34;</span>,
+    <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;react-app-rewired build&#34;</span>,
+    <span style="color:#f92672">&#34;test&#34;</span>: <span style="color:#e6db74">&#34;react-app-rewired test&#34;</span>,
+    <span style="color:#f92672">&#34;eject&#34;</span>: <span style="color:#e6db74">&#34;react-scripts eject&#34;</span>
+}<span style="color:#960050;background-color:#1e0010">,</span>
+</code></pre></div><p>Add a file <code>config-overrides.js</code> at the project root and copy &amp; paste the code below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">webpack</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;webpack&#39;</span>);
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">override</span>(<span style="color:#a6e22e">config</span>) {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fallback</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">resolve</span>.<span style="color:#a6e22e">fallback</span> <span style="color:#f92672">||</span> {};
+    Object.<span style="color:#a6e22e">assign</span>(<span style="color:#a6e22e">fallback</span>, {
+        <span style="color:#e6db74">&#34;crypto&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;crypto-browserify&#34;</span>),
+        <span style="color:#e6db74">&#34;stream&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;stream-browserify&#34;</span>),
+        <span style="color:#e6db74">&#34;assert&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;assert&#34;</span>),
+        <span style="color:#e6db74">&#34;http&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;stream-http&#34;</span>),
+        <span style="color:#e6db74">&#34;https&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;https-browserify&#34;</span>),
+        <span style="color:#e6db74">&#34;os&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;os-browserify&#34;</span>),
+        <span style="color:#e6db74">&#34;url&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;url&#34;</span>)
+    })
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">resolve</span>.<span style="color:#a6e22e">fallback</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fallback</span>;
+    <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">plugins</span> <span style="color:#f92672">||</span> []).<span style="color:#a6e22e">concat</span>([
+        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">webpack</span>.<span style="color:#a6e22e">ProvidePlugin</span>({
+            <span style="color:#a6e22e">process</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;process/browser&#39;</span>,
+            <span style="color:#a6e22e">Buffer</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;buffer&#39;</span>, <span style="color:#e6db74">&#39;Buffer&#39;</span>]
+        })
+    ])
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">config</span>;
+}
+</code></pre></div><p>Run <code>yarn start</code> again and if there are some errors about missing packages, use <code>yarn add [package name]</code> or <code>npm install [package name]</code> to fix it.</p>
+<h1 id="web3js">web3.js</h1>
+<p>As the website said, <strong><a href="https://web3js.readthedocs.io/en/v1.7.0/" target="_blank">web3.js</a>
+</strong> is a collection of libraries that allow you to interact with a local or remote ethereum node using HTTP, IPC or WebSocket.
+By using web3.js, we can manipulate the contract address, the accounts associated with the contract and the ether balance.
+It allows us to develop kinds of applications based on our smart contract.</p>
+<pre tabindex="0"><code class="language-terminal" data-lang="terminal">yarn add web3
+</code></pre><p>In the <code>index.js</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// import the module
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Web3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;web3&#39;</span>);
+
+<span style="color:#75715e">// Socket provider
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">web3</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Web3</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Web3</span>.<span style="color:#a6e22e">providers</span>.<span style="color:#a6e22e">WebsocketProvider</span>(<span style="color:#e6db74">&#39;ws://[RPC Server address provided by web3 provider]&#39;</span>));
+</code></pre></div><p>Since we still testing using Ganache&rsquo;s local blockchain, the address can be filled with the provided <strong>RPC Server</strong> address.</p>
+<p>Some other usage about web3.js like <a href="https://web3js.readthedocs.io/en/v1.2.11/web3-eth.html" target="_blank">web3.eth</a>
+ or <a href="https://web3js.readthedocs.io/en/v1.2.11/web3-eth-contract.html#eth-contract" target="_blank">web3.eth.Contract</a>
+ can be surveyed in the official document.</p>
+<h1 id="run-dapp">Run DApp</h1>
+<p>Beside web3.js, we use other lite modules for development.
+Couple of them includes <em>nanohtml</em>, <em>morphdom</em> and <em>csjs-inject</em>.
+The referred usages can be consider <a href="https://ithelp.ithome.com.tw/articles/10203211" target="_blank">here</a>
+.</p>
+<pre tabindex="0"><code class="language-terminal" data-lang="terminal">yarn add nanohtml morphdom csjs-inject
+</code></pre><p>Load those module in <code>index.js</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">html</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;nanohtml&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">csjs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;csjs-inject&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">morphdom</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;morphdom&#39;</span>);
+</code></pre></div><p>The referred <a href="https://github.com/alincode/king-sandbox" target="_blank">source code</a>
+ is provided or a modification version from myself is <a href="https://github.com/BurkeyLai/King-of-the-Ether/tree/master/web" target="_blank">here</a>
+.
+There are something else to do, load <code>abi.json</code> that we have mentioned earlier and define the deployed smart contract <em>address</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ABI</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;./abi.json&#39;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">DEFAULT_ADDRESS</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;[deployed smart contract address]&#39;</span>;
+</code></pre></div><p>For example, we can use Remix&rsquo;s interface and select one account provided by Ganache to deploy a smart contract.
+Then copy that smart contract address and paste it here, the variable <code>DEFAULT_ADDRESS</code></p>
+<p>As we use <code>yarn start</code> to launch the website again, we may see something like below:</p>
+<p>
+  <figure>
+    <center><img src="https://BurkeyLai.github.io/images/koe_ui.png" alt="koe ui"></center>
+    <figcaption class="figure-caption text-center" style="font-size: 10px">King of the Ether user interface</figcaption>
+  </figure>
+</p>
+<p>Bravo! You can enjoy your game now!</p>
+<p>There are some tips here:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getAccounts</span>(<span style="color:#a6e22e">result</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;&gt;&gt;&gt; 2&#39;</span>);
+  <span style="color:#a6e22e">web3</span>.<span style="color:#a6e22e">eth</span>.<span style="color:#a6e22e">getAccounts</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">addresses</span>) {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">address</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">addresses</span>[<span style="color:#ae81ff">0</span>];
+    <span style="color:#a6e22e">web3</span>.<span style="color:#a6e22e">eth</span>.<span style="color:#a6e22e">defaultAccount</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">address</span>;
+    <span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">account</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">address</span>;
+    <span style="color:#a6e22e">getKingInfo</span>(<span style="color:#a6e22e">result</span>);
+  });
+}
+</code></pre></div><p>Modify the index of <code>addresses</code> can switch between the 10 accounts provided by Ganache.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>In this post, we have done several things.</p>
+<h2 id="heading"></h2>
+<ul>
+<li>Generate the <code>abi.json</code> from the smart contract we finished in <a href="https://BurkeyLai.github.io/2022/02/my-first-smart-contract/">previous post</a>
+ for later usage.</li>
+<li>Create the first React project and setting up the environment for launching website.</li>
+<li>Brief introduction about <code>web3.js</code> and use it in our DApp for development in order to be more convenient.</li>
+<li>Use JavaScript lite modules to create the user interface and behavior of applications for the DApp website.</li>
+</ul>
+<p>We just finished our first DApp and there are still many things else to learn.</p>
+<hr>
+<h1 id="reference">Reference</h1>
+<p>[1] <a href="https://reactjs.org/" target="_blank">React</a>
+</p>
+<p>[2] <a href="https://blog.niclin.tw/2022/02/01/nft-smart-contract-1/" target="_blank">NFT development in practice</a>
+</p>
+<p>[3] <a href="https://ithelp.ithome.com.tw/articles/10201870" target="_blank">DApp development in 30 days</a>
+</p>
+<p>[4] <a href="https://web3js.readthedocs.io/en/v1.2.11/" target="_blank">web3.js - Ethereum JavaScript API</a>
+</p>
+
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/blockchain/">Blockchain</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/smart-contract/">Smart Contract</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/solidity/">Solidity</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/ganache/">Ganache</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/react/">React</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/nanohtml/">nanohtml</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/morphdom/">morphdom</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/csjs-inject/">csjs-inject</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://BurkeyLai.github.io/2022/02/my-first-smart-contract/" data-tooltip="My First Smart Contract" aria-label="PREVIOUS: My First Smart Contract">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://BurkeyLai.github.io/2022/02/my-first-dapp/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://BurkeyLai.github.io/2022/02/my-first-dapp/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://BurkeyLai.github.io/2022/02/my-first-dapp/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#utterances" aria-label="Leave a comment">
+        <i class="fa fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="utterances">
+      <noscript>Please enable JavaScript to view the comments powered by Utterances.</noscript>
+    </div>
+    <script src="https://utteranc.es/client.js"
+      repo="BurkeyLai/BurkeyLai.github.io.comment"
+      issue-term="pathname"
+      label="🤪Utterances"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+    </script>
+  
+
+
+
+            
+            
+          
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Burkey Lai. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://BurkeyLai.github.io/2022/02/my-first-smart-contract/" data-tooltip="My First Smart Contract" aria-label="PREVIOUS: My First Smart Contract">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://BurkeyLai.github.io/2022/02/my-first-dapp/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://BurkeyLai.github.io/2022/02/my-first-dapp/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://BurkeyLai.github.io/2022/02/my-first-dapp/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#utterances" aria-label="Leave a comment">
+        <i class="fa fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F02%2Fmy-first-dapp%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F02%2Fmy-first-dapp%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F02%2Fmy-first-dapp%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://BurkeyLai.github.io/images/ironman.jpg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Burkey Lai</h4>
+    
+      <div id="about-card-bio"><em>imugly1029<!-- raw HTML omitted -->@<!-- raw HTML omitted -->gmail.com</em></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        System Software Engineer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Taiwan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://BurkeyLai.github.io/images/bg1.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://BurkeyLai.github.io/js/script-c0egxxkmw9k7nrxmgv6c81pswjanwv9mvqav7ehorbs2ie0yfz2qs4g3fjyl.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+
