@@ -382,7 +382,7 @@ It is a tool for building and running mobile apps written in Go.</p>
 </code></pre></div><p>Here we can first use the example app for testing.</p>
 <pre tabindex="0"><code class="language-terminal" data-lang="terminal">mkdir test1
 cd test1
-go mode init test1
+go mod init test1
 gomobile init
 go get golang.org/x/mobile/example/basic
 gomobile build -target=android golang.org/x/mobile/example/basic
@@ -403,7 +403,7 @@ However, the example is successful and we can just ignore that error temporary.<
 <p>Now we are going to build our own app.</p>
 <pre tabindex="0"><code class="language-terminal" data-lang="terminal">mkdir test2
 cd test2
-go mode init test2
+go mod init test2
 gomobile init
 go get golang.org/x/mobile/cmd/gobind
 vim test2.go
