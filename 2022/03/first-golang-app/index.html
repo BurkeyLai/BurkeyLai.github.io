@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BR3GJ3BZNL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BR3GJ3BZNL');
+    </script>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9219188063023335" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "First Golang App",
+  
+  "datePublished": "2022-03-12T11:03:00+08:00",
+  "dateModified": "2022-03-12T11:03:00+08:00",
+  "author": {
+    "@type": "Person",
+    "name": "Burkey Lai",
+    
+    "image": "https://BurkeyLai.github.io/images/ironman.jpg"
+    
+  },
+  "mainEntityOfPage": { 
+    "@type": "WebPage",
+    "@id": "https:\/\/BurkeyLai.github.io\/2022\/03\/first-golang-app\/" 
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Home",
+    
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://BurkeyLai.github.io/images/ironman.jpg"
+    }
+    
+  },
+  "description": "One of the popular reason for Golang is about its lightweight and portability, which is convenient to deploy the application on kinds of platforms. In this post, we bring up our first app written in Go and running on Android platform.",
+  "keywords": ["Golang, Gvm, Gomobile, Ubuntu16.04, Android, NDK, App"]
+}
+
+</script>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.92.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name="author" content="Burkey Lai">
+<meta name="keywords" content="Golang, Gvm, Gomobile, Ubuntu16.04, Android, NDK, App">
+<meta name="description" content="One of the popular reason for Golang is about its lightweight and portability, which is convenient to deploy the application on kinds of platforms. In this post, we bring up our first app written in Go and running on Android platform.">
+
+
+<meta property="og:description" content="One of the popular reason for Golang is about its lightweight and portability, which is convenient to deploy the application on kinds of platforms. In this post, we bring up our first app written in Go and running on Android platform.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="First Golang App">
+<meta name="twitter:title" content="First Golang App">
+<meta property="og:url" content="https://BurkeyLai.github.io/2022/03/first-golang-app/">
+<meta property="twitter:url" content="https://BurkeyLai.github.io/2022/03/first-golang-app/">
+<meta property="og:site_name" content="Home">
+<meta property="og:description" content="One of the popular reason for Golang is about its lightweight and portability, which is convenient to deploy the application on kinds of platforms. In this post, we bring up our first app written in Go and running on Android platform.">
+<meta name="twitter:description" content="One of the popular reason for Golang is about its lightweight and portability, which is convenient to deploy the application on kinds of platforms. In this post, we bring up our first app written in Go and running on Android platform.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2022-03-12T11:03:00">
+  
+  
+    <meta property="article:modified_time" content="2022-03-12T11:03:00">
+  
+  
+  
+    
+      <meta property="article:section" content="Golang">
+    
+      <meta property="article:section" content="App">
+    
+  
+  
+    
+      <meta property="article:tag" content="Golang">
+    
+      <meta property="article:tag" content="Gvm">
+    
+      <meta property="article:tag" content="Gomobile">
+    
+      <meta property="article:tag" content="Ubuntu16.04">
+    
+      <meta property="article:tag" content="Android">
+    
+      <meta property="article:tag" content="NDK">
+    
+      <meta property="article:tag" content="App">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://BurkeyLai.github.io/images/ironman.jpg">
+  <meta property="twitter:image" content="https://BurkeyLai.github.io/images/ironman.jpg">
+
+
+
+
+
+
+    <title>First Golang App</title>
+
+    <link rel="icon" href="https://BurkeyLai.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://BurkeyLai.github.io/2022/03/first-golang-app/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    
+    <link rel="stylesheet" href="https://BurkeyLai.github.io/css/style-9glcfduhmxy3dpww8dmc2rpasorgusiokbrrptpvzrgi6lajgwvd0zyafzf.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://BurkeyLai.github.io/" aria-label="Go to homepage">Home</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://BurkeyLai.github.io/#about" aria-label="Open the link: /#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://BurkeyLai.github.io/images/ironman.jpg" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://BurkeyLai.github.io/#about" aria-label="Read more about the author">
+          <img class="sidebar-profile-picture" src="https://BurkeyLai.github.io/images/ironman.jpg" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Burkey Lai</h4>
+        
+          <h5 class="sidebar-profile-bio" style="color: #961F22">Not because they are easy,<br>
+but because they are hard</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://BurkeyLai.github.io/" title="Home">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://BurkeyLai.github.io/categories" title="Categories">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Categories</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://BurkeyLai.github.io/tags" title="Tags">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://BurkeyLai.github.io/archives" title="Archives">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/BurkeyLai" target="_blank" rel="noopener" title="GitHub">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/bo-xiang-lai-352713184/" target="_blank" rel="noopener" title="LinkedIn">
+    
+      <i class="sidebar-button-icon fab fa-lg fa-linkedin" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">LinkedIn</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="mailto:imugly1029@gmail.com" target="_blank" rel="noopener" title="E-Mail">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-envelope" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">E-Mail</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://BurkeyLai.github.io/#about" title="About">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://BurkeyLai.github.io/index.xml" title="RSS">
+    
+      <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden="true"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" id="top">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title">
+      First Golang App
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time datetime="2022-03-12T11:03:00&#43;08:00">
+        
+  March 12, 2022
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://BurkeyLai.github.io/categories/golang">Golang</a>, 
+    
+      <a class="category-link" href="https://BurkeyLai.github.io/categories/app">App</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown">
+            <div class="main-content-wrap">
+              <p>One of the popular reason for <strong>Golang</strong> is about its lightweight and portability, which is convenient to deploy the application on kinds of platforms.
+In this post, we bring up our first app written in Go and running on Android platform.</p>
+<p>Note that the app written in Go can also run on ios which is dependent on your requirement.</p>
+<hr>
+<h1 id="requirements-and-process">Requirements and Process</h1>
+<p>First of all, writing Go app needs the Golang develop environment.
+The Go version have to be greater than <em>1.5</em> or the <strong><a href="https://pkg.go.dev/golang.org/x/mobile/cmd/gomobile" target="_blank">gomobile</a>
+</strong> cannot build and run the Go app.
+My OS is <em>Ubuntu 16.04 LTS</em> and I use <strong><a href="https://github.com/moovweb/gvm" target="_blank">gvm</a>
+</strong> to maintain my Go environment which is very clean and convenient.
+The installation process:</p>
+<pre tabindex="0"><code class="language-terminal" data-lang="terminal">sudo apt-get install binutils bison gcc make build-essential -y
+bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+source ~/.gvm/scripts/gvm
+gvm install go1.17.5 --binary
+gvm use go1.17.5 --default
+</code></pre><p>Moreover, <a href="https://developer.android.com/studio" target="_blank">Android Studio</a>
+ also needs to be installed.
+We require the <strong>NDK</strong> for our gomobile and it will be discussed later.</p>
+<p>The whole process could be:</p>
+<h2 id="heading"></h2>
+<ol>
+<li>Write Go app</li>
+<li>Build up our go project using gomobile</li>
+<li>Use generated .aar and .jar file to build APK</li>
+<li>Install the APK into our Android device</li>
+</ol>
+<p>So, that&rsquo;s begin.</p>
+<h1 id="andoird-ndk">Andoird NDK</h1>
+<p>Install Android NDK. Go to Android Studio’s <em>Tools</em> -&gt; <em>SDK Manager</em>.
+Under <em>SDK Tools</em>, select the NDK version you want to download and click <em>Apply</em>.
+Need to ensure that the installed version is supported by gomobile.
+Here I use the version <em>23.1.7779620</em>.</p>
+<p>
+  <figure>
+    <center><img src="https://BurkeyLai.github.io/images/android_studio_ndk.png" alt="Android Studio NDK"></center>
+    <figcaption class="figure-caption text-center" style="font-size: 10px">Download Android Studio NDK</figcaption>
+  </figure>
+</p>
+<p>Check the <em>Android SDK Location</em> up there and copy it.
+Modify the <code>~/.bashrc</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export ANDROID_HOME<span style="color:#f92672">=</span>Your/Android/SDK/Location
+export ANDROID_NDK_HOME<span style="color:#f92672">=</span>Your/Android/SDK/Location/ndk/23.1.7779620
+</code></pre></div><p>The NDK environment setting is finished.
+Remember <code>source ~/.bashrc</code> to update the modifications.</p>
+<h1 id="gomobile">Gomobile</h1>
+<p>First, we set up gomobile for later use.
+It is a tool for building and running mobile apps written in Go.</p>
+<pre tabindex="0"><code class="language-terminal" data-lang="terminal">go install golang.org/x/mobile/cmd/gomobile@latest
+</code></pre><p>Update the <code>~/.bashrc</code>, you can use <code>go env</code> to check your <em>GOPATH</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export PATH<span style="color:#f92672">=</span>$PATH:$GOPATH/bin
+</code></pre></div><p>Here we can first use the example app for testing.</p>
+<pre tabindex="0"><code class="language-terminal" data-lang="terminal">mkdir test1
+cd test1
+go mode init test1
+gomobile init
+go get golang.org/x/mobile/example/basic
+gomobile build -target=android golang.org/x/mobile/example/basic
+</code></pre><p>We can see an APK <code>basic.apk</code> is generated.
+Now, launch the <em>enumerator</em> and we gonna install the APK.</p>
+<pre tabindex="0"><code>gomobile install golang.org/x/mobile/example/basic
+</code></pre><p>Click an app named <em>basic</em> and you can see something like this:</p>
+<p>
+  <figure>
+    <center><img src="https://BurkeyLai.github.io/images/basic_apk.png" alt="basic.apk"></center>
+    <figcaption class="figure-caption text-center" style="font-size: 10px">App basic</figcaption>
+  </figure>
+</p>
+<p>Congrats! The tool gomobile works and you have now success to run the example app.</p>
+<p>Note that when I use <code>gomobile version</code> to check my version, it failed and I cannot figure what&rsquo;s going on.
+However, the example is successful and we can just ignore that error temporary.</p>
+<h1 id="run-your-own-app">Run your own app</h1>
+<p>Now we are going to build our own app.</p>
+<pre tabindex="0"><code class="language-terminal" data-lang="terminal">mkdir test2
+cd test2
+go mode init test2
+gomobile init
+go get golang.org/x/mobile/cmd/gobind
+vim test2.go
+</code></pre><p>Copy and paste the code below into <code>test2.go</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">mymodulelib</span>
+
+<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
+
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">SayHello</span>() {
+        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello from mymodule&#34;</span>)
+}
+</code></pre></div><p>And use the command below to generate <em>.aar</em> and <em>.jar</em> file.</p>
+<pre tabindex="0"><code class="language-terminal" data-lang="terminal">gomobile bind -target android
+</code></pre><p>Now, we create a new android project within Java and go to <em>New</em> -&gt; <em>New Module</em>.
+Select <em>Import .JAR/.AAR Package</em> then choose <em>.aar</em> file and click <em>Finish</em>.
+Check the <code>settings.gradle</code> have include the library.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">include <span style="color:#e6db74">&#39;:mymodulelib&#39;</span>
+</code></pre></div><p>Go to <code>build.gradle (:app)</code> and add the line below inside the <em>dependencies</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">implementation <span style="color:#a6e22e">project</span><span style="color:#f92672">(</span>path: <span style="color:#e6db74">&#39;mymodulelib&#39;</span><span style="color:#f92672">)</span>
+</code></pre></div><p>Something notable is that your <strong>compileSdkVersion</strong> need to be higher enough or it will occur errors when you build APK.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">compileSdkVersion <span style="color:#ae81ff">31</span>
+</code></pre></div><p>In the <code>MainActivity.java</code>, add:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">mymodulelib<span style="color:#f92672">.</span><span style="color:#a6e22e">Mymodulelib</span><span style="color:#f92672">.</span><span style="color:#a6e22e">sayHello</span><span style="color:#f92672">();</span>
+</code></pre></div><p>Then, go to <em>Build</em> -&gt; <em>Build Bundle(s) / APK(s)</em> and click <em>Build APK(s)</em>.</p>
+<p>An APK is now generated, I will copy it to the folder <code>test2</code> and rename it to <code>test2.apk</code>.</p>
+<p>
+  <figure>
+    <center><img src="https://BurkeyLai.github.io/images/generated_apk.png" alt="generated apk"></center>
+    <figcaption class="figure-caption text-center" style="font-size: 10px">Generated APK</figcaption>
+  </figure>
+</p>
+<p>Now we have to install the APK. Use command:</p>
+<pre tabindex="0"><code class="language-terminal" data-lang="terminal">adb install test2.apk
+</code></pre><p>You can now see an app <em>test2</em> in the enumerator, launch it and open the <strong>Logcat</strong> in Android Studio.
+You will see:</p>
+<p>
+  <figure>
+    <center><img src="https://BurkeyLai.github.io/images/hello_from_mymodule.png" alt="hello from mymodule"></center>
+    <figcaption class="figure-caption text-center" style="font-size: 10px">Hello from mymodule in Logcat</figcaption>
+  </figure>
+</p>
+<p>Excellent! Now we have our own Golang app running on Android.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>In this post, we have go through the process to build our first Golang app executable on Android.</p>
+<h2 id="heading-1"></h2>
+<ul>
+<li>Check the requirements and setup the environment.</li>
+<li>Install <strong>Android NDK</strong>.</li>
+<li>Install the tool <strong>gomobile</strong> and experiments the example app.</li>
+<li>Writing our own Golang app and deploy it on Android platform.</li>
+</ul>
+<p>The further application needs to be well developed, and I will keep on update my trial.</p>
+<hr>
+<h1 id="reference">Reference</h1>
+<p>[1] <a href="https://pkg.go.dev/golang.org/x/mobile/cmd/gomobile" target="_blank">gomobile</a>
+</p>
+<p>[2] <a href="https://pkg.go.dev/golang.org/x/mobile/example/basic" target="_blank">gomobile basic</a>
+</p>
+<p>[3] <a href="https://stackoverflow.com/questions/70658553/unable-to-run-gomobile-init-or-version-on-mac" target="_blank">Unable to run gomobile init or version on mac</a>
+</p>
+<p>[4] <a href="https://developer.android.com/studio/projects/android-library" target="_blank">Create an Android library</a>
+</p>
+
+              
+
+
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/golang/">Golang</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/gvm/">Gvm</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/gomobile/">Gomobile</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/ubuntu16.04/">Ubuntu16.04</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/android/">Android</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/ndk/">NDK</a>
+
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/app/">App</a>
+
+                  </div>
+                
+              
+            
+            
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://BurkeyLai.github.io/2022/02/my-first-dapp/" data-tooltip="My First DApp" aria-label="PREVIOUS: My First DApp">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.reddit.com/submit?url=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Reddit" aria-label="Share on Reddit">
+          <i class="fab fa-reddit" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#utterances" aria-label="Leave a comment">
+        <i class="fa fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+            
+  
+    <div id="utterances">
+      <noscript>Please enable JavaScript to view the comments powered by Utterances.</noscript>
+    </div>
+    <script src="https://utteranc.es/client.js"
+      repo="BurkeyLai/BurkeyLai.github.io.comment"
+      issue-term="pathname"
+      label="🤪Utterances"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+    </script>
+  
+
+
+
+            
+            
+          
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Burkey Lai. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        
+<div class="post-actions-wrap">
+  <nav >
+    <ul class="post-actions post-action-nav">
+      
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--disabled">
+          
+              <i class="fa fa-angle-left"></i>
+              <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+            </a>
+        </li>
+        <li class="post-action">
+          
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://BurkeyLai.github.io/2022/02/my-first-dapp/" data-tooltip="My First DApp" aria-label="PREVIOUS: My First DApp">
+          
+              <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+              <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+      
+    </ul>
+  </nav>
+<ul class="post-actions post-action-share" >
+  
+    <li class="post-action hide-lg hide-md hide-sm">
+      <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Share this post">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </a>
+    </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Facebook" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Twitter" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Linkedin" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+      <li class="post-action hide-xs">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.reddit.com/submit?url=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Reddit" aria-label="Share on Reddit">
+          <i class="fab fa-reddit" aria-hidden="true"></i>
+        </a>
+      </li>
+    
+  
+  
+    <li class="post-action">
+      <a class="post-action-btn btn btn--default" href="#utterances" aria-label="Leave a comment">
+        <i class="fa fa-comment"></i>
+      </a>
+    </li>
+  
+  <li class="post-action">
+    
+      <a class="post-action-btn btn btn--default" href="#top" aria-label="Back to top">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    
+    </a>
+  </li>
+</ul>
+</div>
+
+
+      </div>
+      
+<div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-times"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F03%2Ffirst-golang-app%2F" aria-label="Share on Facebook">
+          <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F03%2Ffirst-golang-app%2F" aria-label="Share on Twitter">
+          <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F03%2Ffirst-golang-app%2F" aria-label="Share on Linkedin">
+          <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.reddit.com/submit?url=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F03%2Ffirst-golang-app%2F" aria-label="Share on Reddit">
+          <i class="fab fa-reddit" aria-hidden="true"></i><span>Share on Reddit</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+
+
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-times"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://BurkeyLai.github.io/images/ironman.jpg" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Burkey Lai</h4>
+    
+      <div id="about-card-bio">Not because they are easy,<br>
+but because they are hard</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        System Software Engineer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker-alt"></i>
+        <br/>
+        Taiwan
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://BurkeyLai.github.io/images/bg1.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js" integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<script src="https://BurkeyLai.github.io/js/script-c0egxxkmw9k7nrxmgv6c81pswjanwv9mvqav7ehorbs2ie0yfz2qs4g3fjyl.min.js"></script>
+
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js"></script>
+  
+
+  
+    <script async crossorigin="anonymous" defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js"></script>
+  
+
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+
+
+    
+  </body>
+</html>
+

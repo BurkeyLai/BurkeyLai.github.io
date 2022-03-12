@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Golang on Home</title>
+    <link>https://BurkeyLai.github.io/categories/golang/</link>
+    <description>Recent content in Golang on Home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Mar 2022 11:03:00 +0800</lastBuildDate><atom:link href="https://BurkeyLai.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>First Golang App</title>
+      <link>https://BurkeyLai.github.io/2022/03/first-golang-app/</link>
+      <pubDate>Sat, 12 Mar 2022 11:03:00 +0800</pubDate>
+      
+      <guid>https://BurkeyLai.github.io/2022/03/first-golang-app/</guid>
+      <description>One of the popular reason for &lt;strong&gt;Golang&lt;/strong&gt; is about its lightweight and portability, which is convenient to deploy the application on kinds of platforms. In this post, we bring up our first app written in Go and running on Android platform.</description>
+    </item>
+    
+  </channel>
+</rss>

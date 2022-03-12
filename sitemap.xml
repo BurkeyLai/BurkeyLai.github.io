@@ -2,13 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://BurkeyLai.github.io/tags/android/</loc>
+    <lastmod>2022-03-12T11:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/tags/app/</loc>
+    <lastmod>2022-03-12T11:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/categories/app/</loc>
+    <lastmod>2022-03-12T11:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/categories/</loc>
+    <lastmod>2022-03-12T11:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/2022/03/first-golang-app/</loc>
+    <lastmod>2022-03-12T11:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/tags/golang/</loc>
+    <lastmod>2022-03-12T11:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/categories/golang/</loc>
+    <lastmod>2022-03-12T11:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/tags/gomobile/</loc>
+    <lastmod>2022-03-12T11:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/tags/gvm/</loc>
+    <lastmod>2022-03-12T11:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/</loc>
+    <lastmod>2022-03-12T11:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/tags/ndk/</loc>
+    <lastmod>2022-03-12T11:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/posts/</loc>
+    <lastmod>2022-03-12T11:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/tags/</loc>
+    <lastmod>2022-03-12T11:03:00+08:00</lastmod>
+  </url><url>
+    <loc>https://BurkeyLai.github.io/tags/ubuntu16.04/</loc>
+    <lastmod>2022-03-12T11:03:00+08:00</lastmod>
+  </url><url>
     <loc>https://BurkeyLai.github.io/tags/blockchain/</loc>
     <lastmod>2022-02-27T13:28:00+08:00</lastmod>
   </url><url>
     <loc>https://BurkeyLai.github.io/categories/blockchain/</loc>
-    <lastmod>2022-02-27T13:28:00+08:00</lastmod>
-  </url><url>
-    <loc>https://BurkeyLai.github.io/categories/</loc>
     <lastmod>2022-02-27T13:28:00+08:00</lastmod>
   </url><url>
     <loc>https://BurkeyLai.github.io/tags/csjs-inject/</loc>
@@ -20,9 +59,6 @@
     <loc>https://BurkeyLai.github.io/tags/ganache/</loc>
     <lastmod>2022-02-27T13:28:00+08:00</lastmod>
   </url><url>
-    <loc>https://BurkeyLai.github.io/</loc>
-    <lastmod>2022-02-27T13:28:00+08:00</lastmod>
-  </url><url>
     <loc>https://BurkeyLai.github.io/tags/morphdom/</loc>
     <lastmod>2022-02-27T13:28:00+08:00</lastmod>
   </url><url>
@@ -32,9 +68,6 @@
     <loc>https://BurkeyLai.github.io/tags/nanohtml/</loc>
     <lastmod>2022-02-27T13:28:00+08:00</lastmod>
   </url><url>
-    <loc>https://BurkeyLai.github.io/posts/</loc>
-    <lastmod>2022-02-27T13:28:00+08:00</lastmod>
-  </url><url>
     <loc>https://BurkeyLai.github.io/tags/react/</loc>
     <lastmod>2022-02-27T13:28:00+08:00</lastmod>
   </url><url>
@@ -42,9 +75,6 @@
     <lastmod>2022-02-27T13:28:00+08:00</lastmod>
   </url><url>
     <loc>https://BurkeyLai.github.io/tags/solidity/</loc>
-    <lastmod>2022-02-27T13:28:00+08:00</lastmod>
-  </url><url>
-    <loc>https://BurkeyLai.github.io/tags/</loc>
     <lastmod>2022-02-27T13:28:00+08:00</lastmod>
   </url><url>
     <loc>https://BurkeyLai.github.io/2022/02/my-first-smart-contract/</loc>

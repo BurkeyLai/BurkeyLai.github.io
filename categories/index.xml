@@ -6,7 +6,25 @@
     <description>Recent content in Categories on Home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Feb 2022 13:28:00 +0800</lastBuildDate><atom:link href="https://BurkeyLai.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Mar 2022 11:03:00 +0800</lastBuildDate><atom:link href="https://BurkeyLai.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>App</title>
+      <link>https://BurkeyLai.github.io/categories/app/</link>
+      <pubDate>Sat, 12 Mar 2022 11:03:00 +0800</pubDate>
+      
+      <guid>https://BurkeyLai.github.io/categories/app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Golang</title>
+      <link>https://BurkeyLai.github.io/categories/golang/</link>
+      <pubDate>Sat, 12 Mar 2022 11:03:00 +0800</pubDate>
+      
+      <guid>https://BurkeyLai.github.io/categories/golang/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Blockchain</title>
       <link>https://BurkeyLai.github.io/categories/blockchain/</link>
