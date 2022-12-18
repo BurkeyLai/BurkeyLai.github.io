@@ -22,10 +22,10 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "First Golang App",
+  "headline": "Recap: Optical Flow",
   
-  "datePublished": "2022-03-12T11:03:00+08:00",
-  "dateModified": "2022-03-12T11:03:00+08:00",
+  "datePublished": "2022-03-19T15:07:00+08:00",
+  "dateModified": "2022-03-19T15:07:00+08:00",
   "author": {
     "@type": "Person",
     "name": "Burkey Lai",
@@ -35,7 +35,7 @@
   },
   "mainEntityOfPage": { 
     "@type": "WebPage",
-    "@id": "https:\/\/BurkeyLai.github.io\/2022\/03\/first-golang-app\/" 
+    "@id": "https:\/\/BurkeyLai.github.io\/2022\/03\/recap-optical-flow\/" 
   },
   "publisher": {
     "@type": "Organization",
@@ -47,8 +47,8 @@
     }
     
   },
-  "description": "One of the popular reason for Golang is about its lightweight and portability, which is convenient to deploy the application on kinds of platforms. In this post, we bring up our first app written in Go and running on Android platform.",
-  "keywords": ["Golang, Gvm, Gomobile, Ubuntu16.04, Android, NDK, App"]
+  "description": "What is Optical Flow? To introduce it briefly, it could be explained as the motion of objects between consecutive frames of sequence.",
+  "keywords": ["Computer Vision, Optical Flow, Motion Estimation, Lucas-Kanade, Farneback"]
 }
 
 </script>
@@ -57,50 +57,46 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.92.0 with theme Tranquilpeak 0.5.3-BETA">
 <meta name="author" content="Burkey Lai">
-<meta name="keywords" content="Golang, Gvm, Gomobile, Ubuntu16.04, Android, NDK, App">
-<meta name="description" content="One of the popular reason for Golang is about its lightweight and portability, which is convenient to deploy the application on kinds of platforms. In this post, we bring up our first app written in Go and running on Android platform.">
+<meta name="keywords" content="Computer Vision, Optical Flow, Motion Estimation, Lucas-Kanade, Farneback">
+<meta name="description" content="What is Optical Flow? To introduce it briefly, it could be explained as the motion of objects between consecutive frames of sequence.">
 
 
-<meta property="og:description" content="One of the popular reason for Golang is about its lightweight and portability, which is convenient to deploy the application on kinds of platforms. In this post, we bring up our first app written in Go and running on Android platform.">
+<meta property="og:description" content="What is Optical Flow? To introduce it briefly, it could be explained as the motion of objects between consecutive frames of sequence.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="First Golang App">
-<meta name="twitter:title" content="First Golang App">
-<meta property="og:url" content="https://BurkeyLai.github.io/2022/03/first-golang-app/">
-<meta property="twitter:url" content="https://BurkeyLai.github.io/2022/03/first-golang-app/">
+<meta property="og:title" content="Recap: Optical Flow">
+<meta name="twitter:title" content="Recap: Optical Flow">
+<meta property="og:url" content="https://BurkeyLai.github.io/2022/03/recap-optical-flow/">
+<meta property="twitter:url" content="https://BurkeyLai.github.io/2022/03/recap-optical-flow/">
 <meta property="og:site_name" content="Home">
-<meta property="og:description" content="One of the popular reason for Golang is about its lightweight and portability, which is convenient to deploy the application on kinds of platforms. In this post, we bring up our first app written in Go and running on Android platform.">
-<meta name="twitter:description" content="One of the popular reason for Golang is about its lightweight and portability, which is convenient to deploy the application on kinds of platforms. In this post, we bring up our first app written in Go and running on Android platform.">
+<meta property="og:description" content="What is Optical Flow? To introduce it briefly, it could be explained as the motion of objects between consecutive frames of sequence.">
+<meta name="twitter:description" content="What is Optical Flow? To introduce it briefly, it could be explained as the motion of objects between consecutive frames of sequence.">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2022-03-12T11:03:00">
+    <meta property="article:published_time" content="2022-03-19T15:07:00">
   
   
-    <meta property="article:modified_time" content="2022-03-12T11:03:00">
+    <meta property="article:modified_time" content="2022-03-19T15:07:00">
   
-  
-  
-    
-      <meta property="article:section" content="Golang">
-    
-      <meta property="article:section" content="App">
-    
   
   
     
-      <meta property="article:tag" content="Golang">
+      <meta property="article:section" content="Algorithm">
     
-      <meta property="article:tag" content="Gvm">
+      <meta property="article:section" content="Computer Vision">
     
-      <meta property="article:tag" content="Gomobile">
+  
+  
     
-      <meta property="article:tag" content="Ubuntu16.04">
+      <meta property="article:tag" content="Computer Vision">
     
-      <meta property="article:tag" content="Android">
+      <meta property="article:tag" content="Optical Flow">
     
-      <meta property="article:tag" content="NDK">
+      <meta property="article:tag" content="Motion Estimation">
     
-      <meta property="article:tag" content="App">
+      <meta property="article:tag" content="Lucas-Kanade">
+    
+      <meta property="article:tag" content="Farneback">
     
   
 
@@ -121,14 +117,14 @@
 
 
 
-    <title>First Golang App</title>
+    <title>Recap: Optical Flow</title>
 
     <link rel="icon" href="https://BurkeyLai.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://BurkeyLai.github.io/2022/03/first-golang-app/">
+    <link rel="canonical" href="https://BurkeyLai.github.io/2022/03/recap-optical-flow/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -300,15 +296,15 @@ but because they are hard</h5>
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title">
-      First Golang App
+      Recap: Optical Flow
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time datetime="2022-03-12T11:03:00&#43;08:00">
+      <time datetime="2022-03-19T15:07:00&#43;08:00">
         
-  March 12, 2022
+  March 19, 2022
 
       </time>
     
@@ -317,9 +313,9 @@ but because they are hard</h5>
   
     <span>in</span>
     
-      <a class="category-link" href="https://BurkeyLai.github.io/categories/golang">Golang</a>, 
+      <a class="category-link" href="https://BurkeyLai.github.io/categories/algorithm">Algorithm</a>, 
     
-      <a class="category-link" href="https://BurkeyLai.github.io/categories/app">App</a>
+      <a class="category-link" href="https://BurkeyLai.github.io/categories/computer-vision">Computer Vision</a>
     
   
 
@@ -329,144 +325,114 @@ but because they are hard</h5>
           
           <div class="post-content markdown">
             <div class="main-content-wrap">
-              <p>One of the popular reason for <strong>Golang</strong> is about its lightweight and portability, which is convenient to deploy the application on kinds of platforms.
-In this post, we bring up our first app written in Go and running on Android platform.</p>
-<p>Note that the app written in Go can also run on ios which is dependent on your requirement.</p>
-<hr>
-<h1 id="requirements-and-process">Requirements and Process</h1>
-<p>First of all, writing Go app needs the Golang develop environment.
-The Go version have to be greater than <em>1.5</em> or the <strong><a href="https://pkg.go.dev/golang.org/x/mobile/cmd/gomobile" target="_blank">gomobile</a>
-</strong> cannot build and run the Go app.
-My OS is <em>Ubuntu 16.04 LTS</em> and I use <strong><a href="https://github.com/moovweb/gvm" target="_blank">gvm</a>
-</strong> to maintain my Go environment which is very clean and convenient.
-The installation process:</p>
-<pre tabindex="0"><code class="language-terminal" data-lang="terminal">sudo apt-get install binutils bison gcc make build-essential -y
-bash &lt; &lt;(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
-source ~/.gvm/scripts/gvm
-gvm install go1.17.5 --binary
-gvm use go1.17.5 --default
-</code></pre><p>Moreover, <a href="https://developer.android.com/studio" target="_blank">Android Studio</a>
- also needs to be installed.
-We require the <strong>NDK</strong> for our gomobile and it will be discussed later.</p>
-<p>The whole process could be:</p>
+              <p>What is <strong>Optical Flow</strong>?
+To introduce it briefly, it could be explained as the motion of objects between consecutive frames of sequence.
+The objects’ motion are projected form 3-D space to a 2-D image plane.
+This algorithm&rsquo;s derivation is caused by the relative movement between the object and camera.</p>
+<p>There are many applications have something to do with optical flow, like <em><a href="https://en.wikipedia.org/wiki/Structure_from_motion" target="_blank">Structure from Motion</a>
+</em>, <em>Object Tracking</em>, <em>Video Compression</em> and <em>Video Stabilization</em>.</p>
+<p>To derivate and implement optical flow, there are some constraints for considerations:</p>
 <h2 id="heading"></h2>
 <ol>
-<li>Write Go app</li>
-<li>Build up our go project using gomobile</li>
-<li>Use generated .aar and .jar file to build APK</li>
-<li>Install the APK into our Android device</li>
+<li>The <a href="https://www.sciencedirect.com/topics/computer-science/pixel-intensity" target="_blank">pixel intensities</a>
+ of objects are identical between consecutive frames.</li>
+<li>Time between adjacent frames is continuous or the motion of objects changes slightly (smooth).</li>
+<li>The neighbors of target pixel have the resemble movements.</li>
 </ol>
-<p>So, that&rsquo;s begin.</p>
-<h1 id="andoird-ndk">Andoird NDK</h1>
-<p>Install Android NDK. Go to Android Studio’s <em>Tools</em> -&gt; <em>SDK Manager</em>.
-Under <em>SDK Tools</em>, select the NDK version you want to download and click <em>Apply</em>.
-Need to ensure that the installed version is supported by gomobile.
-Here I use the version <em>23.1.7779620</em>.</p>
+<p>I used to have some research in this field so it&rsquo;s time for some organizations and recaptions.</p>
+<hr>
+<h1 id="general-representation">General Representation</h1>
+<p>We discuss optical flow begin with two frames relation like figure below shows.</p>
 <p>
   <figure>
-    <center><img src="https://BurkeyLai.github.io/images/android_studio_ndk.png" alt="Android Studio NDK"></center>
-    <figcaption class="figure-caption text-center" style="font-size: 10px">Download Android Studio NDK</figcaption>
+    <center><img src="https://BurkeyLai.github.io/images/two_frames_motion.png" alt="Optical Flow two frames motion"></center>
+    <figcaption class="figure-caption text-center" style="font-size: 10px">Optical Flow two frames motion</figcaption>
   </figure>
 </p>
-<p>Check the <em>Android SDK Location</em> up there and copy it.
-Modify the <code>~/.bashrc</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export ANDROID_HOME<span style="color:#f92672">=</span>Your/Android/SDK/Location
-export ANDROID_NDK_HOME<span style="color:#f92672">=</span>Your/Android/SDK/Location/ndk/23.1.7779620
-</code></pre></div><p>The NDK environment setting is finished.
-Remember <code>source ~/.bashrc</code> to update the modifications.</p>
-<h1 id="gomobile">Gomobile</h1>
-<p>First, we set up gomobile for later use.
-It is a tool for building and running mobile apps written in Go.</p>
-<pre tabindex="0"><code class="language-terminal" data-lang="terminal">go install golang.org/x/mobile/cmd/gomobile@latest
-</code></pre><p>Update the <code>~/.bashrc</code>, you can use <code>go env</code> to check your <em>GOPATH</em>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">export PATH<span style="color:#f92672">=</span>$PATH:$GOPATH/bin
-</code></pre></div><p>Here we can first use the example app for testing.</p>
-<pre tabindex="0"><code class="language-terminal" data-lang="terminal">mkdir test1
-cd test1
-go mod init test1
-gomobile init
-go get golang.org/x/mobile/example/basic
-gomobile build -target=android golang.org/x/mobile/example/basic
-</code></pre><p>We can see an APK <code>basic.apk</code> is generated.
-Now, launch the <em>enumerator</em> and we gonna install the APK.</p>
-<pre tabindex="0"><code>gomobile install golang.org/x/mobile/example/basic
-</code></pre><p>Click an app named <em>basic</em> and you can see something like this:</p>
-<p>
-  <figure>
-    <center><img src="https://BurkeyLai.github.io/images/basic_apk.png" alt="basic.apk"></center>
-    <figcaption class="figure-caption text-center" style="font-size: 10px">App basic</figcaption>
-  </figure>
-</p>
-<p>Congrats! The tool gomobile works and you have now success to run the example app.</p>
-<p>Note that when I use <code>gomobile version</code> to check my version, it failed and I cannot figure what&rsquo;s going on.
-However, the example is successful and we can just ignore that error temporary.</p>
-<h1 id="run-your-own-app">Run your own app</h1>
-<p>Now we are going to build our own app.</p>
-<pre tabindex="0"><code class="language-terminal" data-lang="terminal">mkdir test2
-cd test2
-go mod init test2
-gomobile init
-go get golang.org/x/mobile/cmd/gobind
-vim test2.go
-</code></pre><p>Copy and paste the code below into <code>test2.go</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#f92672">package</span> <span style="color:#a6e22e">mymodulelib</span>
-
-<span style="color:#f92672">import</span> <span style="color:#e6db74">&#34;fmt&#34;</span>
-
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">SayHello</span>() {
-        <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#e6db74">&#34;Hello from mymodule&#34;</span>)
-}
-</code></pre></div><p>And use the command below to generate <em>.aar</em> and <em>.jar</em> file.</p>
-<pre tabindex="0"><code class="language-terminal" data-lang="terminal">gomobile bind -target android
-</code></pre><p>Now, we create a new android project within Java and go to <em>New</em> -&gt; <em>New Module</em>.
-Select <em>Import .JAR/.AAR Package</em> then choose <em>.aar</em> file and click <em>Finish</em>.
-Check the <code>settings.gradle</code> have include the library.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">include <span style="color:#e6db74">&#39;:mymodulelib&#39;</span>
-</code></pre></div><p>Go to <code>build.gradle (:app)</code> and add the line below inside the <em>dependencies</em>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">implementation <span style="color:#a6e22e">project</span><span style="color:#f92672">(</span>path: <span style="color:#e6db74">&#39;mymodulelib&#39;</span><span style="color:#f92672">)</span>
-</code></pre></div><p>Something notable is that your <strong>compileSdkVersion</strong> need to be higher enough or it will occur errors when you build APK.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-gradle" data-lang="gradle">compileSdkVersion <span style="color:#ae81ff">31</span>
-</code></pre></div><p>In the <code>MainActivity.java</code>, add:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">mymodulelib<span style="color:#f92672">.</span><span style="color:#a6e22e">Mymodulelib</span><span style="color:#f92672">.</span><span style="color:#a6e22e">sayHello</span><span style="color:#f92672">();</span>
-</code></pre></div><p>Then, go to <em>Build</em> -&gt; <em>Build Bundle(s) / APK(s)</em> and click <em>Build APK(s)</em>.</p>
-<p>An APK is now generated, I will copy it to the folder <code>test2</code> and rename it to <code>test2.apk</code>.</p>
-<p>
-  <figure>
-    <center><img src="https://BurkeyLai.github.io/images/generated_apk.png" alt="generated apk"></center>
-    <figcaption class="figure-caption text-center" style="font-size: 10px">Generated APK</figcaption>
-  </figure>
-</p>
-<p>Now we have to install the APK. Use command:</p>
-<pre tabindex="0"><code class="language-terminal" data-lang="terminal">adb install test2.apk
-</code></pre><p>You can now see an app <em>test2</em> in the enumerator, launch it and open the <strong>Logcat</strong> in Android Studio.
-You will see:</p>
-<p>
-  <figure>
-    <center><img src="https://BurkeyLai.github.io/images/hello_from_mymodule.png" alt="hello from mymodule"></center>
-    <figcaption class="figure-caption text-center" style="font-size: 10px">Hello from mymodule in Logcat</figcaption>
-  </figure>
-</p>
-<p>Excellent! Now we have our own Golang app running on Android.</p>
-<h1 id="conclusion">Conclusion</h1>
-<p>In this post, we have go through the process to build our first Golang app executable on Android.</p>
+<p>We can represent the image into equations:</p>
+<p>$$I(x, y, t) = I(x+dx, y+dy, t+dt)$$</p>
+<p>where <em>I</em> is <em>image intensity</em>, <em>x</em> is <em>horizontal coordinate</em>, <em>y</em> is <em>vertical coordinate</em>, <em>t</em> is <em>frame timestamp</em>.</p>
+<p>Therefore, we can use the <strong><a href="https://en.wikipedia.org/wiki/Taylor_series" target="_blank">Taylor Series Approximation</a>
+</strong> to expand the polynomial.
+It will become:</p>
+<p>$$I(x+dx, y+dy, t+dt) \approx I(x, y, t) + \frac{\partial I}{\partial x}dx + \frac{\partial I}{\partial y}dy  + \frac{\partial I}{\partial t}dt $$</p>
+<p>Since we have defined constraint:</p>
 <h2 id="heading-1"></h2>
 <ul>
-<li>Check the requirements and setup the environment.</li>
-<li>Install <strong>Android NDK</strong>.</li>
-<li>Install the tool <strong>gomobile</strong> and experiments the example app.</li>
-<li>Writing our own Golang app and deploy it on Android platform.</li>
+<li>The pixel intensities of objects are identical between consecutive frames.</li>
 </ul>
-<p>The further application needs to be well developed, and I will keep on update my trial.</p>
+<p>thus,</p>
+<p>$$ \frac{\partial I}{\partial x}dx + \frac{\partial I}{\partial y}dy  + \frac{\partial I}{\partial t}dt = 0$$</p>
+<p>It can be divided by <em>dt</em> to derive the optical flow equation.</p>
+<p>$$ \frac{\partial I}{\partial x}\frac{dx}{dt} + \frac{\partial I}{\partial y}\frac{dy}{dt}  + \frac{\partial I}{\partial t} = 0$$</p>
+<p>We can futhermore express the equation using matrix form:</p>
+<p>$$ \begin{bmatrix} I_x &amp; I_y \end{bmatrix}\begin{bmatrix} u \\ v \end{bmatrix} = -I_t $$</p>
+<p>$$
+\begin{cases}
+\text{$ I_x=\frac{\partial I}{\partial x},\ \rm{grident\ along\ x} $} \\
+\text{$ I_y=\frac{\partial I}{\partial y},\ \rm{grident\ along\ y} $} \\
+\text{$ I_t=\frac{\partial I}{\partial t},\ \rm{grident\ along\ t} $} \\
+\text{$ u=\frac{dx}{dt},\ \rm{instaneous\ speed\ in\ x\ direction} $} \\
+\text{$ v=\frac{dy}{dt},\ \rm{instaneous\ speed\ in\ y\ direction} $}
+\end{cases}
+$$</p>
+<p>This is the general representation of optical flow in form of matrix.
+For the target pixel, solve <em>u=dx/dt</em> and <em>v=dy/dt</em> to determine movement over time.</p>
+<p>Cause we have two unknown variables <em>u</em> and <em>v</em> with only one formula, this <strong><a href="https://en.wikipedia.org/?title=Aperture_problem&amp;redirect=no" target="_blank">aperture problem</a>
+</strong> needs to be solved by implementing some methods.
+Different methods including:</p>
+<h2 id="heading-2"></h2>
+<ul>
+<li>Gradient based</li>
+<li>Block-matching based</li>
+<li>Energy based</li>
+<li>Deep-Learning based</li>
+</ul>
+<p>Depending on different ways implemented, we are going to introduce two classic methods, the <strong>Sparse Optical Flow</strong> and <strong>Dense Optical Flow</strong>.
+There are <a href="https://nanonets.com/blog/optical-flow/" target="_blank">articles</a>
+ exhibit the results using GIF of these two methods which are very clear and straightful.</p>
+<h1 id="sparse-optical-flow-lucas-kanade">Sparse Optical Flow: Lucas-Kanade</h1>
+<p>Sparse optical flow selects a <strong>sparse feature</strong> set of pixels to track its velocity vectors, that is, motion.
+Interesting features such as <em>edges</em> and <em>corners</em> are passed in the optical flow function through frames to ensure that the same points are being tracked.</p>
+<p>To extract those features, sometimes we need <strong>corner detector</strong> like <a href="https://en.wikipedia.org/wiki/Harris_corner_detector" target="_blank">Harris</a>
+ or <a href="https://en.wikipedia.org/wiki/Corner_detection#The_Harris_&amp;_Stephens_/_Shi%E2%80%93Tomasi_corner_detection_algorithms" target="_blank">Shi-Tomasi</a>
+.
+These detectors calculating the gradients of intensity according to each target point and classify the wanted features.</p>
+<p>As one of the representatives, <strong><a href="https://en.wikipedia.org/wiki/Lucas%E2%80%93Kanade_method" target="_blank">Lucas-Kanade</a>
+</strong> method estimate the motion of interesting features(<em>corners</em>) by comparing two consecutive frames.
+It uses a small <em>nxn</em> window (neighborhood) around the features detected by corner detector for solving the optical flow formula and takes the constraints we have mentioned before as assumption.</p>
+<p>
+  <figure>
+    <center><img src="https://BurkeyLai.github.io/images/constraints_as_assumption.png" alt="Constraints as assumption"></center>
+    <figcaption class="figure-caption text-center" style="font-size: 10px">Constraints as assumption</figcaption>
+  </figure>
+</p>
+<p>Each pixel in the window has its own optical flow equation, express into matrix formula:</p>
+<p>$$\begin{bmatrix} I_x(q_1) &amp; I_y(q_1) \\ I_x(q_2) &amp; I_y(q_2) \\ &hellip; &amp; &hellip; \\ I_x(q_i) &amp; I_y(q_i) \end{bmatrix}\begin{bmatrix} u \\ v \end{bmatrix} = \begin{bmatrix} -I_t(q_1) \\ -I_t(q_2) \\ &hellip; \\ -I_t(q_i) \end{bmatrix}
+$$</p>
+<p>This <strong>over-determined equation</strong> can be solved by <strong><a href="https://en.wikipedia.org/wiki/Generalized_inverse" target="_blank">pseudo-inverse</a>
+</strong>.</p>
+<p>$$Ax = b,\ x = (A^TA)^{-1}A^Tb$$</p>
+<p>Identified features are tracked and optical flow vectors of these points are iteratively computed.</p>
+<p>Something important is that Lucas-Kanade method only works for small movements (from our assumption) and fails when there is large motion.
+<strong>OpenCV</strong> adopts <em>pyramids</em> for implementing Lucas-Kanade.
+It computes optical flow along with scales, thus in a high-level view, small motions are neglected as we escalates the pyramid and large motions are reduced to small motions.</p>
+<h1 id="dense-optical-flow-farneback">Dense Optical Flow: Farneback</h1>
+<p>Dense optical flow attempts to compute the optical flow vector for every pixel of each frame.
+In comparison with sparse optical flow, dense optical flow has <em>slower computation</em> but <em>more accurate</em>.
+It is more suitable for applications such as learning structure from motion and video segmentation.</p>
+<p>First, the method approximates the windows of image frames by quadratic polynomials through <strong>polynomial expansion</strong> transform.</p>
+<p>Second, by observing how the polynomial transforms under translation (motion), a method doing <strong>displacement estimate</strong> from polynomial expansion coefficients is defined.</p>
+<p>Quadratic polynomials represent the local coordinate system which approximate some neighborhood of each pixel.</p>
+<p>$$f(x, y) \approx r_1 + r_2x + r_3y + r_4x^2 + r_5y^2 + r_6xy$$
+$$ = \begin{bmatrix} x &amp; y \end{bmatrix}^T\begin{bmatrix} r_4 &amp; r_6/2 \\ r_6/2 &amp; r_5 \end{bmatrix}\begin{bmatrix} x \\ y \end{bmatrix} + \begin{bmatrix} r_2 \\ r_3 \end{bmatrix}^T\begin{bmatrix} x \\ y \end{bmatrix} + r_1 $$
+$$ = X^TAX + b^TX + c$$</p>
+<p>where <em>A</em> is a symmetric matrix, <em>b</em> is a vector and <em>c</em> is a scaler.</p>
+<p>If a polynomial undergoes an ideal translation:</p>
+<p>$$ f_1(x) = X^TA_1X + b_1^TX + c_1 $$</p>
+<p>and move a global displacement by <em>d</em>:</p>
 <hr>
 <h1 id="reference">Reference</h1>
-<p>[1] <a href="https://pkg.go.dev/golang.org/x/mobile/cmd/gomobile" target="_blank">gomobile</a>
-</p>
-<p>[2] <a href="https://pkg.go.dev/golang.org/x/mobile/example/basic" target="_blank">gomobile basic</a>
-</p>
-<p>[3] <a href="https://stackoverflow.com/questions/70658553/unable-to-run-gomobile-init-or-version-on-mac" target="_blank">Unable to run gomobile init or version on mac</a>
-</p>
-<p>[4] <a href="https://developer.android.com/studio/projects/android-library" target="_blank">Create an Android library</a>
-</p>
 
               
 
@@ -481,19 +447,15 @@ You will see:</p>
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/golang/">Golang</a>
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/computer-vision/">Computer Vision</a>
 
-  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/gvm/">Gvm</a>
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/optical-flow/">Optical Flow</a>
 
-  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/gomobile/">Gomobile</a>
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/motion-estimation/">Motion Estimation</a>
 
-  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/ubuntu16.04/">Ubuntu16.04</a>
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/lucas-kanade/">Lucas-Kanade</a>
 
-  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/android/">Android</a>
-
-  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/ndk/">NDK</a>
-
-  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/app/">App</a>
+  <a class="tag tag--primary tag--small" href="https://BurkeyLai.github.io/tags/farneback/">Farneback</a>
 
                   </div>
                 
@@ -506,7 +468,7 @@ You will see:</p>
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://BurkeyLai.github.io/2022/03/recap-optical-flow/" data-tooltip="Recap: Optical Flow" aria-label="NEXT: Recap: Optical Flow">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -514,7 +476,7 @@ You will see:</p>
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://BurkeyLai.github.io/2022/02/my-first-dapp/" data-tooltip="My First DApp" aria-label="PREVIOUS: My First DApp">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://BurkeyLai.github.io/2022/03/first-golang-app/" data-tooltip="First Golang App" aria-label="PREVIOUS: First Golang App">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -532,25 +494,25 @@ You will see:</p>
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://BurkeyLai.github.io/2022/03/recap-optical-flow/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://BurkeyLai.github.io/2022/03/recap-optical-flow/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://BurkeyLai.github.io/2022/03/recap-optical-flow/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.reddit.com/submit?url=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Reddit" aria-label="Share on Reddit">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.reddit.com/submit?url=https://BurkeyLai.github.io/2022/03/recap-optical-flow/" title="Share on Reddit" aria-label="Share on Reddit">
           <i class="fab fa-reddit" aria-hidden="true"></i>
         </a>
       </li>
@@ -611,7 +573,7 @@ You will see:</p>
       
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://BurkeyLai.github.io/2022/03/recap-optical-flow/" data-tooltip="Recap: Optical Flow" aria-label="NEXT: Recap: Optical Flow">
+            <a class="post-action-btn btn btn--disabled">
           
               <i class="fa fa-angle-left"></i>
               <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -619,7 +581,7 @@ You will see:</p>
         </li>
         <li class="post-action">
           
-            <a class="post-action-btn btn btn--default tooltip--top" href="https://BurkeyLai.github.io/2022/02/my-first-dapp/" data-tooltip="My First DApp" aria-label="PREVIOUS: My First DApp">
+            <a class="post-action-btn btn btn--default tooltip--top" href="https://BurkeyLai.github.io/2022/03/first-golang-app/" data-tooltip="First Golang App" aria-label="PREVIOUS: First Golang App">
           
               <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
               <i class="fa fa-angle-right"></i>
@@ -637,25 +599,25 @@ You will see:</p>
     </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Facebook" aria-label="Share on Facebook">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://BurkeyLai.github.io/2022/03/recap-optical-flow/" title="Share on Facebook" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Twitter" aria-label="Share on Twitter">
+        <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://BurkeyLai.github.io/2022/03/recap-optical-flow/" title="Share on Twitter" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Linkedin" aria-label="Share on Linkedin">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https://BurkeyLai.github.io/2022/03/recap-optical-flow/" title="Share on Linkedin" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>
     
       <li class="post-action hide-xs">
-        <a class="post-action-btn btn btn--default" target="new" href="https://www.reddit.com/submit?url=https://BurkeyLai.github.io/2022/03/first-golang-app/" title="Share on Reddit" aria-label="Share on Reddit">
+        <a class="post-action-btn btn btn--default" target="new" href="https://www.reddit.com/submit?url=https://BurkeyLai.github.io/2022/03/recap-optical-flow/" title="Share on Reddit" aria-label="Share on Reddit">
           <i class="fab fa-reddit" aria-hidden="true"></i>
         </a>
       </li>
@@ -686,25 +648,25 @@ You will see:</p>
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F03%2Ffirst-golang-app%2F" aria-label="Share on Facebook">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F03%2Frecap-optical-flow%2F" aria-label="Share on Facebook">
           <i class="fab fa-facebook-square" aria-hidden="true"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F03%2Ffirst-golang-app%2F" aria-label="Share on Twitter">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F03%2Frecap-optical-flow%2F" aria-label="Share on Twitter">
           <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F03%2Ffirst-golang-app%2F" aria-label="Share on Linkedin">
+        <a class="share-option-btn" target="new" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F03%2Frecap-optical-flow%2F" aria-label="Share on Linkedin">
           <i class="fab fa-linkedin" aria-hidden="true"></i><span>Share on Linkedin</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.reddit.com/submit?url=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F03%2Ffirst-golang-app%2F" aria-label="Share on Reddit">
+        <a class="share-option-btn" target="new" href="https://www.reddit.com/submit?url=https%3A%2F%2FBurkeyLai.github.io%2F2022%2F03%2Frecap-optical-flow%2F" aria-label="Share on Reddit">
           <i class="fab fa-reddit" aria-hidden="true"></i><span>Share on Reddit</span>
         </a>
       </li>
