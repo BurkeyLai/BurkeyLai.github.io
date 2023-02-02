@@ -431,6 +431,15 @@ $$ = X^TAX + b^TX + c$$</p>
 <p>If a polynomial undergoes an ideal translation:</p>
 <p>$$ f_1(x) = X^TA_1X + b_1^TX + c_1 $$</p>
 <p>and move a global displacement by <em>d</em>:</p>
+<p>$$ f_2(x) = f_1(X - d) = (X - d)^TA_1(X - d) + b_1^T(X - d) + c_1 $$
+$$ = X^TA_1X + (b_1 - 2A_1d)^TX + d^TA_1d - b_1^Td + c_1 $$
+$$ = X^TA_2X + b_2^TX + c_2 $$</p>
+<p>where</p>
+<p>$$ A_2=A_1 $$
+$$ b_2=b_1 - 2A_1d $$
+$$ c_2=d^TA_1d − b_1^T𝑑 + c_1 $$</p>
+<p>If $A_1$ is non-singular, we have</p>
+<p>$$ d = -\frac{1}{2}A_1^{−1}(b_2 − b_1) $$</p>
 <hr>
 <h1 id="reference">Reference</h1>
 
@@ -560,7 +569,7 @@ $$ = X^TAX + b^TX + c$$</p>
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2022 Burkey Lai. All Rights Reserved
+    &copy; 2023 Burkey Lai. All Rights Reserved
   </span>
 </footer>
 
