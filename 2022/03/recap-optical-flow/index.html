@@ -439,14 +439,30 @@ $$ = X^TA_2X + b_2^TX + c_2 $$</p>
 $$ b_2=b_1 - 2A_1d $$
 $$ c_2=d^TA_1d − b_1^T𝑑 + c_1 $$</p>
 <p>$$ d = -\frac{1}{2}A_1^{−1}(b_2 − b_1)\ when\ A_1\ is\ non-singular $$</p>
+<p>Practical consideration in signal (pixels in one window) transition, using single polynomial</p>
+<p>$$ X^TAX + b^TX + c $$</p>
+<p>to represent entire signal, and a global translation <em>d</em> relating the two signals, are quite unrealistic.</p>
+<p>$$ A(X) = \frac{A_1(X) + A_2(X)}{2} $$</p>
+<p>Also introduce</p>
+<p>$$ \Delta b(X) = −\frac{1}{2}(b_2(X) − b_1(𝑋)) $$</p>
+<p>to obtain the primary constraint</p>
+<p>$$ A(X)d(X) = \Delta b(X) $$</p>
+<p>Solve</p>
+<p>$$ d =(A^TA)^{−1} (A^T \Delta b) $$</p>
+<p>pointwise may be too noisy.</p>
+<p>Use constraint as assumption, we can integrate information over a neighborhood of each pixel.</p>
+<p>$$ e(X) = \sum_{\Delta X \in I} \omega (\Delta X) ||A(X + \Delta X)d(X) − \Delta b(X + \Delta X)||^2 $$
+$$ d(X) = (\sum \omega A^TA)^{−1} (\sum \omega A)^T \Delta b $$
+$$ \omega (\Delta X):\ weight\ function\ for\ the\ points\ in\ the\ neighborhood $$</p>
+<p>The coefficients are estimated from a <strong>weighted least squares</strong> fit to the signal values in the neighborhood, which also known as <strong>normalized convolution</strong>.</p>
 <hr>
 <h1 id="reference">Reference</h1>
-<p>[1] [Introduction to Motion Estimation with Optical Flow] (<a href="https://nanonets.com/blog/optical-flow/" target="_blank">https://nanonets.com/blog/optical-flow/</a>
-)</p>
-<p>[2] [Optical Flow Estimation] (<a href="https://www.cs.toronto.edu/~fleet/research/Papers/flowChapter05.pdf" target="_blank">https://www.cs.toronto.edu/~fleet/research/Papers/flowChapter05.pdf</a>
-)</p>
-<p>[3] [Two-Frame Motion Estimation Based on Polynomial Expansion] (<a href="http://www.diva-portal.org/smash/get/diva2:273847/FULLTEXT01.pdf" target="_blank">http://www.diva-portal.org/smash/get/diva2:273847/FULLTEXT01.pdf</a>
-)</p>
+<p>[1] <a href="https://nanonets.com/blog/optical-flow/" target="_blank">Introduction to Motion Estimation with Optical Flow</a>
+</p>
+<p>[2] <a href="https://www.cs.toronto.edu/~fleet/research/Papers/flowChapter05.pdf" target="_blank">Optical Flow Estimation</a>
+</p>
+<p>[3] <a href="http://www.diva-portal.org/smash/get/diva2:273847/FULLTEXT01.pdf" target="_blank">Two-Frame Motion Estimation Based on Polynomial Expansion</a>
+</p>
 
               
 
